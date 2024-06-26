@@ -4,7 +4,7 @@ RAGChecker is an advanced automatic evaluation framework designed to assess and 
 
 <p align="center">
   <img src="imgs/ragchecker_metrics.png" alt="RefChecker Metrics" 
-  style="width:700px">
+  style="width:800px">
   <br>
   <b>Figure</b>: RefChecker Metrics
 </p>
