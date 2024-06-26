@@ -87,7 +87,6 @@ Results for examples/checking_outputs.json:
     "self_knowledge": 25.0,
     "faithfulness": 70.8,
     "claim_count": 8,
-    "response_acc": 0.0
   }
 }
 ```
