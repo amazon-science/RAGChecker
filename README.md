@@ -29,9 +29,8 @@ RAGChecker empowers developers and researchers to thoroughly evaluate, diagnose,
 ### Setup Environment
 
 ```bash
-pip install refchecker
-python -m spacy download en_core_web_sm
 pip install -r requirements
+python -m spacy download en_core_web_sm
 ```
 
 
