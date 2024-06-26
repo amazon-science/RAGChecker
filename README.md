@@ -55,6 +55,7 @@ python ragchecker/checking.py \
     --retrieved2answer
 ```
 
+Please refer to [RefChecker's guidance](https://github.com/amazon-science/RefChecker/tree/main?tab=readme-ov-file#choose-models-for-the-extractor-and-checker) for setting up the extractor and checker models.
 
 ### Computing Metrics
 
