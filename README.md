@@ -1,5 +1,29 @@
 # RAGChecker: A Fine-grained Framework For Diagnosing RAG
 
+RAGChecker is an advanced automatic evaluation framework designed to assess and diagnose Retrieval-Augmented Generation (RAG) systems. It provides a comprehensive suite of metrics and tools for in-depth analysis of RAG performance.
+
+<p align="center">
+  <img src="imgs/ragchecker_metrics.png" alt="RefChecker Metrics" 
+  style="width:700px">
+  <br>
+  <b>Figure</b>: RefChecker Metrics
+</p>
+
+## 🌟 Highlighted Features
+
+- **Holistic Evaluation**: RAGChecker offers `Overall Metrics` for an assessment of the entire RAG pipeline.
+
+- **Diagnostic Metrics**: `Diagnostic Retriever Metrics` for analyzing the retrieval component. `Diagnostic Generator Metrics` for evaluating the generation component. These metrics provide valuable insights for targeted improvements.
+
+- **Fine-grained Evaluation**: Utilizes `claim-level entailment` operations for fine-grained evaluation.
+
+- **Benchmark Dataset**: A comprehensive RAG benchmark dataset with 4k questions covering 10 domains (upcoming).
+
+- **Meta-Evaluation**: A human-annotated preference dataset for evaluating the correlations of RAGChecker's results with human judgments.
+
+RAGChecker empowers developers and researchers to thoroughly evaluate, diagnose, and enhance their RAG systems with precision and depth.
+
+
 ## 🚀 Quick Start
 
 ### Setup Environment
@@ -13,7 +37,7 @@ pip install -r requirements
 
 ### Run the Checking Pipeline
 
-We have put an example file in the [examples](./examples) folder. Please process your own file with the same format in [examples/checking_inputs.json](./examples/checking_inputs.json). 
+We have put an example file in the [examples](./examples) folder. Please process your own data with the same format in [examples/checking_inputs.json](./examples/checking_inputs.json). 
 
 If you are using AWS Bedrock version of Llama3 70B for the claim extractor and checker, use the following command to run the checking pipeline, the checking results will be saved to `--output_path`:
 

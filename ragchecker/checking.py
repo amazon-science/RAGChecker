@@ -19,21 +19,24 @@ def get_args():
         help="Output path to the result json file."
     )
     parser.add_argument(
-        "--cache_dir", type=str, default="./.cache",
-        help="Path to the cache directory. Default: ./.cache"
+        '--extractor_name', type=str,
+        help="Model used for extracting claims."
     )
     parser.add_argument(
-        '--extractor_name', type=str, default="openai/meta-llama/Meta-Llama-3-70B-Instruct",
-        help="Model used for extracting triplets. Default: claude3-sonnet."
+        '--extractor_api_base', type=str,
+        help='API base URL for the extractor if using vllm deployed open source LLMs.'
     )
     parser.add_argument(
         '--extractor_max_new_tokens', type=int, default=1000,
-        help="Max generated tokens of the extractor, set a larger value for longer documents. Default: 500"
+        help="Max generated tokens of the extractor, set a larger value for longer documents. Default: 1000"
     )
     parser.add_argument(
-        "--checker_name", type=str, default="openai/meta-llama/Meta-Llama-3-70B-Instruct",
-        help="Model used for checking whether the triplets are factual. "
-        "Default: claude3-sonnet."
+        "--checker_name", type=str,
+        help="Model used for checking whether the claims are factual. "
+    )
+    parser.add_argument(
+        '--checker_api_base', type=str,
+        help='API base URL for the checker if using vllm deployed open source LLMs.'
     )
     parser.add_argument(
         "--batch_size_extractor", type=int, default=32,
@@ -43,28 +46,23 @@ def get_args():
         "--batch_size_checker", type=int, default=32,
         help="Batch size for checker."
     )
+    
+    # checking options
     parser.add_argument(
-        "--check_citations", action="store_true",
-        help="Check citations for source attribution."
+        '--answer2response', action='store_true',
+        help='Check claims in response using gt answer as reference.'
     )
     parser.add_argument(
-        '--extractor_api_base', type=str
+        '--response2answer', action='store_true',
+        help='Check claims in gt answer using response as reference.'
     )
     parser.add_argument(
-        '--checker_api_base', type=str
-    )
-    # checking
-    parser.add_argument(
-        '--answer2response', action='store_true'
+        '--retrieved2answer', action='store_true',
+        help='Check claims in gt answer using retrieved context as references.'
     )
     parser.add_argument(
-        '--response2answer', action='store_true'
-    )
-    parser.add_argument(
-        '--retrieved2answer', action='store_true'
-    )
-    parser.add_argument(
-        '--retrieved2response', action='store_true'
+        '--retrieved2response', action='store_true',
+        help='Check claims in response using retrieved context as references.'
     )
     parser.add_argument(
         '--openai_api_key', type=str
