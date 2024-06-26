@@ -2,13 +2,10 @@ import os
 import json
 from argparse import ArgumentParser, RawTextHelpFormatter
 
-import torch
-
 from refchecker.extractor import LLMExtractor
 from refchecker.checker import (
     LLMChecker, NLIChecker, AlignScoreChecker
 )
-from refchecker.aggregator import strict_agg, soft_agg, major_agg
 
 
 def get_args():
@@ -79,20 +76,21 @@ def get_args():
 def main():
     args = get_args()
     
-    if args.openai_key:
-        os.environ['OPENAI_API_KEY'] = args.openai_key
+    if args.openai_api_key:
+        os.environ['OPENAI_API_KEY'] = args.openai_api_key
     
     extract(args)
     check(args)
 
 
 def extract(args):
-    if os.path.exists(args.output_path) and 'response_claims' in json.load(open(args.output_path)):
-        return
+    output_data = None
+    if os.path.exists(args.output_path):
+        output_data = json.load(open(args.output_path))
+        if 'response_claims' in output_data and 'gt_answer_claims' in output_data:
+            return
     
-    # initialize extractor models
-    print(args.openai_key, args.extractor_api_base)
-    
+    # initialize extractor models    
     extractor = LLMExtractor(
         model=args.extractor_name, 
         batch_size=args.batch_size_extractor,
@@ -103,30 +101,37 @@ def extract(args):
     with open(args.input_path, "r") as fp:
         data = json.load(fp)
     input_data = data['input_data']
-
-    responses = [item["response"] for item in input_data]
-    questions = [item["query"] for item in input_data]
-
     
-    # claim extraction
-    print("Extracting claims...")
-    response_extract_results = extractor.extract(
-        batch_responses=responses,
-        batch_questions=questions,
-        max_new_tokens=args.extractor_max_new_tokens
-    )
-    response_claims = [[c.content for c in res.claims] for res in response_extract_results]
-    
-    # save results
-    output_data = {
-        "input_data": input_data,
-        "gt_answer_claims": data['gt_answer_claims'],
-        "response_claims": response_claims,
-    }
+    if output_data is None:
+        output_data = {"input_data": input_data}
 
-    with open(args.output_path, "w") as fp:
-        json.dump(output_data, fp, indent=2)
-    torch.cuda.empty_cache()
+    if 'response_claims' not in output_data:
+        responses = [item["response"] for item in input_data]
+        questions = [item["query"] for item in input_data]
+
+        print("Extracting response claims...")
+        response_extract_results = extractor.extract(
+            batch_responses=responses,
+            batch_questions=questions,
+            max_new_tokens=args.extractor_max_new_tokens
+        )
+        response_claims = [[c.content for c in res.claims] for res in response_extract_results]
+        output_data['response_claims'] = response_claims
+        json.dump(output_data, open(args.output_path, "w"), indent=2)
+
+
+    if 'gt_answer_claims' not in output_data:
+        gt_answers = [item["gt_answer"] for item in input_data]
+        questions = [item["query"] for item in input_data]
+        print("Extracting ground truth answer claims...")
+        response_extract_results = extractor.extract(
+            batch_responses=gt_answers,
+            batch_questions=questions,
+            max_new_tokens=args.extractor_max_new_tokens
+        )
+        gt_answer_claims = [[c.content for c in res.claims] for res in response_extract_results]
+        output_data['gt_answer_claims'] = gt_answer_claims
+        json.dump(output_data, open(args.output_path, "w"), indent=2)
 
 
 def check(args):

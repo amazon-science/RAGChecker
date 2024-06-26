@@ -1,0 +1,635 @@
+{
+  "input_data": [
+    {
+      "query_id": "0",
+      "query": "What's the longest river in the world?",
+      "gt_answer": "The Nile is a major north-flowing river in northeastern Africa. It flows into the Mediterranean Sea. The Nile is the longest river in Africa and has historically been considered the longest river in the world, though this has been contested by research suggesting that the Amazon River is slightly longer. Of the world's major rivers, the Nile is one of the smallest, as measured by annual flow in cubic metres of water. About 6,650 km (4,130 mi) long, its drainage basin covers eleven countries: the Democratic Republic of the Congo, Tanzania, Burundi, Rwanda, Uganda, Kenya, Ethiopia, Eritrea, South Sudan, Sudan, and Egypt.",
+      "response": "The longest river in the world is the Nile, stretching approximately 6,650 kilometers (4,130 miles) through northeastern Africa, flowing through countries such as Uganda, Sudan, and Egypt before emptying into the Mediterranean Sea. There is some debate about this title, as recent studies suggest the Amazon River could be longer if its longest tributaries are included, potentially extending its length to about 7,000 kilometers (4,350 miles).",
+      "retrieved_context": [
+        {
+          "doc_id": "000",
+          "text": "Scientists debate whether the Amazon or the Nile is the longest river in the world. Traditionally, the Nile is considered longer, but recent information suggests that the Amazon may be longer."
+        },
+        {
+          "doc_id": "001",
+          "text": "The Nile River was central to the Ancient Egyptians' rise to wealth and power. Since rainfall is almost non-existent in Egypt, the Nile River and its yearly floodwaters offered the people a fertile oasis for rich agriculture."
+        },
+        {
+          "doc_id": "002",
+          "text": "The world's longest rivers are defined as the longest natural streams whose water flows within a channel, or streambed, with defined banks."
+        },
+        {
+          "doc_id": "003",
+          "text": "The Amazon River could be considered longer if its longest tributaries are included, potentially extending its length to about 7,000 kilometers"
+        }
+      ]
+    },
+    {
+      "query_id": "1",
+      "query": "What does the democratic republic of Congo flag represent?",
+      "gt_answer": "The national flag of the Democratic Republic of the Congo represents blue for peace, red for \"the blood of the country's martyrs\", yellow for the country's wealth ; and a star for a radiant future for the country.",
+      "response": "The flag of the Democratic Republic of the Congo (DRC) features a sky blue field with a red diagonal stripe bordered by narrow yellow edges, and a yellow five-pointed star in the upper left corner. Each element on the flag carries specific symbolism: the blue represents peace, the red symbolizes the blood of the country's martyrs, the yellow denotes the nation's wealth, and the star stands for hope for a better future.",
+      "retrieved_context": [
+        {
+          "doc_id": "000",
+          "text": "The flag of the second Republic of Mobutu Sese Seko became the official banner after Mobutu established his dictatorship. This flag was used from 1966 to 1971 and consisted of the same yellow star, now made smaller, situated in the top corner of the hoist side, with a red, yellow-lined band running diagonally across the center. The red symbolized the people's blood; the yellow symbolized prosperity; the blue symbolized hope; and the star represented unity."
+        },
+        {
+          "doc_id": "001",
+          "text": "The current flag of the Democratic Republic of Congo, which has been adopted after the approval of a new constitution in 2006, is composed of a blue sheet, red diagonal stripe and a yellow five-pointed star at the top of the left part of the flag. Blue symbolizes peace, red stands for blood of martyrs, yellow color that frames the red stripe denotes prosperity and the star represents hope for a brighter future of the country."
+        },
+        {
+          "doc_id": "002",
+          "text": "The blue color in the flag symbolizes peace, the red should remind of the country\u2019s martyrs, the yellow is for the country\u2019s riches and the star represents the future."
+        }
+      ]
+    }
+  ],
+  "response_claims": [
+    [
+      [
+        "Nile",
+        "is",
+        "longest river in the world"
+      ],
+      [
+        "Nile",
+        "stretches",
+        "approximately 6,650 kilometers"
+      ],
+      [
+        "Nile",
+        "stretches",
+        "4,130 miles"
+      ],
+      [
+        "Nile",
+        "flows through",
+        "northeastern Africa"
+      ],
+      [
+        "Nile",
+        "flows through",
+        "Uganda"
+      ],
+      [
+        "Nile",
+        "flows through",
+        "Sudan"
+      ],
+      [
+        "Nile",
+        "flows through",
+        "Egypt"
+      ],
+      [
+        "Nile",
+        "empties into",
+        "Mediterranean Sea"
+      ],
+      [
+        "Amazon River",
+        "could be",
+        "longer"
+      ],
+      [
+        "Amazon River",
+        "length",
+        "about 7,000 kilometers"
+      ],
+      [
+        "Amazon River",
+        "length",
+        "4,350 miles"
+      ],
+      [
+        "Amazon River",
+        "longest tributaries",
+        "included"
+      ]
+    ],
+    [
+      [
+        "The flag of the Democratic Republic of the Congo",
+        "features",
+        "a sky blue field with a red diagonal stripe bordered by narrow yellow edges, and a yellow five-pointed star in the upper left corner"
+      ],
+      [
+        "The blue",
+        "represents",
+        "peace"
+      ],
+      [
+        "The red",
+        "symbolizes",
+        "the blood of the country's martyrs"
+      ],
+      [
+        "The yellow",
+        "denotes",
+        "the nation's wealth"
+      ],
+      [
+        "The star",
+        "stands for",
+        "hope for a better future"
+      ]
+    ]
+  ],
+  "gt_answer_claims": [
+    [
+      [
+        "The Nile",
+        "is",
+        "a major north-flowing river"
+      ],
+      [
+        "The Nile",
+        "location",
+        "northeastern Africa"
+      ],
+      [
+        "The Nile",
+        "flows into",
+        "the Mediterranean Sea"
+      ],
+      [
+        "The Nile",
+        "is",
+        "the longest river in Africa"
+      ],
+      [
+        "The Nile",
+        "has historically been considered",
+        "the longest river in the world"
+      ],
+      [
+        "The Nile",
+        "is contested by",
+        "research suggesting that the Amazon River is slightly longer"
+      ],
+      [
+        "The Nile",
+        "is one of",
+        "the smallest of the world's major rivers"
+      ],
+      [
+        "The Nile",
+        "measured by",
+        "annual flow in cubic metres of water"
+      ],
+      [
+        "The Nile",
+        "length",
+        "6,650 km"
+      ],
+      [
+        "The Nile",
+        "length",
+        "4,130 mi"
+      ],
+      [
+        "The Nile's drainage basin",
+        "covers",
+        "eleven countries"
+      ],
+      [
+        "The Nile's drainage basin",
+        "includes",
+        "the Democratic Republic of the Congo"
+      ],
+      [
+        "The Nile's drainage basin",
+        "includes",
+        "Tanzania"
+      ],
+      [
+        "The Nile's drainage basin",
+        "includes",
+        "Burundi"
+      ],
+      [
+        "The Nile's drainage basin",
+        "includes",
+        "Rwanda"
+      ],
+      [
+        "The Nile's drainage basin",
+        "includes",
+        "Uganda"
+      ],
+      [
+        "The Nile's drainage basin",
+        "includes",
+        "Kenya"
+      ],
+      [
+        "The Nile's drainage basin",
+        "includes",
+        "Ethiopia"
+      ],
+      [
+        "The Nile's drainage basin",
+        "includes",
+        "Eritrea"
+      ],
+      [
+        "The Nile's drainage basin",
+        "includes",
+        "South Sudan"
+      ],
+      [
+        "The Nile's drainage basin",
+        "includes",
+        "Sudan"
+      ],
+      [
+        "The Nile's drainage basin",
+        "includes",
+        "Egypt"
+      ]
+    ],
+    [
+      [
+        "The national flag of the Democratic Republic of the Congo",
+        "represents",
+        "blue"
+      ],
+      [
+        "Blue",
+        "represents",
+        "peace"
+      ],
+      [
+        "The national flag of the Democratic Republic of the Congo",
+        "represents",
+        "red"
+      ],
+      [
+        "Red",
+        "represents",
+        "the blood of the country's martyrs"
+      ],
+      [
+        "The national flag of the Democratic Republic of the Congo",
+        "represents",
+        "yellow"
+      ],
+      [
+        "Yellow",
+        "represents",
+        "the country's wealth"
+      ],
+      [
+        "The national flag of the Democratic Republic of the Congo",
+        "represents",
+        "a star"
+      ],
+      [
+        "A star",
+        "represents",
+        "a radiant future for the country"
+      ]
+    ]
+  ],
+  "answer2response": [
+    [
+      "Neutral",
+      "Entailment",
+      "Entailment",
+      "Entailment",
+      "Entailment",
+      "Entailment",
+      "Entailment",
+      "Entailment",
+      "Entailment",
+      "Neutral",
+      "Contradiction",
+      "Neutral"
+    ],
+    [
+      "Neutral",
+      "Entailment",
+      "Entailment",
+      "Entailment",
+      "Entailment"
+    ]
+  ],
+  "response2answer": [
+    [
+      "Entailment",
+      "Entailment",
+      "Entailment",
+      "Entailment",
+      "Entailment",
+      "Entailment",
+      "Contradiction",
+      "Neutral",
+      "Entailment",
+      "Entailment",
+      "Neutral",
+      "Neutral",
+      "Neutral",
+      "Neutral",
+      "Neutral",
+      "Entailment",
+      "Neutral",
+      "Neutral",
+      "Neutral",
+      "Neutral",
+      "Entailment",
+      "Entailment"
+    ],
+    [
+      "Entailment",
+      "Entailment",
+      "Contradiction",
+      "Entailment",
+      "Neutral",
+      "Entailment",
+      "Entailment",
+      "Entailment"
+    ]
+  ],
+  "retrieved2answer": [
+    [
+      [
+        "Neutral",
+        "Entailment",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Entailment",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Entailment",
+        "Entailment",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Entailment",
+        "Neutral",
+        "Neutral",
+        "Entailment"
+      ],
+      [
+        "Contradiction",
+        "Contradiction",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Entailment",
+        "Neutral",
+        "Neutral"
+      ]
+    ],
+    [
+      [
+        "Neutral",
+        "Entailment",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Entailment",
+        "Entailment"
+      ],
+      [
+        "Neutral",
+        "Entailment",
+        "Neutral"
+      ],
+      [
+        "Contradiction",
+        "Entailment",
+        "Entailment"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Entailment"
+      ],
+      [
+        "Entailment",
+        "Neutral",
+        "Entailment"
+      ],
+      [
+        "Entailment",
+        "Entailment",
+        "Entailment"
+      ],
+      [
+        "Neutral",
+        "Entailment",
+        "Entailment"
+      ]
+    ]
+  ],
+  "retrieved2response": [
+    [
+      [
+        "Neutral",
+        "Entailment",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Entailment",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Entailment",
+        "Neutral",
+        "Neutral",
+        "Entailment"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Entailment"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Neutral",
+        "Neutral",
+        "Entailment"
+      ]
+    ],
+    [
+      [
+        "Neutral",
+        "Entailment",
+        "Neutral"
+      ],
+      [
+        "Neutral",
+        "Entailment",
+        "Entailment"
+      ],
+      [
+        "Contradiction",
+        "Entailment",
+        "Entailment"
+      ],
+      [
+        "Entailment",
+        "Neutral",
+        "Entailment"
+      ],
+      [
+        "Contradiction",
+        "Entailment",
+        "Entailment"
+      ]
+    ]
+  ]
+}
