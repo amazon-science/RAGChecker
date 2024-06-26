@@ -91,9 +91,9 @@ Results for examples/checking_outputs.json:
 }
 ```
 
-## Meta Evaluation
+## Meta-Evaluation
 
-
+Please refer to [data/meta_evaluation](./data/meta_evaluation/README.md) for details of meta-evaluation of the effectiveness of RAGChecker.
 
 ## Security
 
