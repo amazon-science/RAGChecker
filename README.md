@@ -101,7 +101,7 @@ Results for examples/checking_outputs.json:
 ```
 
 ### Run the Checking Pipeline with Python
-```
+```python
 from ragchecker import RAGResults, RAGChecker
 
 
