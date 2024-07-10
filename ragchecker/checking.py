@@ -67,6 +67,12 @@ def get_args():
     parser.add_argument(
         '--openai_api_key', type=str
     )
+    parser.add_argument(
+        '--joint_check', action='store_true'
+    )
+    parser.add_argument(
+        '--with_rationale', action='store_true'
+    )
 
     return parser.parse_args()
 
@@ -141,10 +147,11 @@ def check(args):
     responses = [item["response"] for item in input_data]
     gt_answers = [item["gt_answer"] for item in input_data]
     questions = [item["query"] for item in input_data]
-    retrieved = [
-        [psg["text"] for psg in item["retrieved_context"]]
-        for item in input_data
-    ]
+    if args.retrieved2answer or args.retrieved2response:
+        retrieved = [
+            [psg["text"] for psg in item["retrieved_context"]]
+            for item in input_data
+        ]
     
     # initialize checker models
     if args.checker_name == "nli":
@@ -168,10 +175,13 @@ def check(args):
             batch_claims=response_claims,
             batch_references=gt_answers, 
             batch_questions=questions,
-            max_reference_segment_length=0
+            max_reference_segment_length=0,
+            is_joint=args.joint_check,
+            with_rationale=args.with_rationale
         )  # [num_items, num_claims]
-        data['answer2response'] = answer2response
-        json.dump(data, open(args.output_path, "w"), indent=2)
+        if answer2response is not None:
+            data['answer2response'] = answer2response[0] if args.joint_check else answer2response
+            json.dump(data, open(args.output_path, "w"), indent=2)
     
     if args.response2answer and 'response2answer' not in data:
         print("Checking response -> GT answer claims...")
@@ -179,10 +189,13 @@ def check(args):
             batch_claims=gt_answer_claims,
             batch_references=responses, 
             batch_questions=questions,
-            max_reference_segment_length=0
+            max_reference_segment_length=0,
+            is_joint=args.joint_check,
+            with_rationale=args.with_rationale
         )  # [num_items, num_claims]
-        data['response2answer'] = response2answer
-        json.dump(data, open(args.output_path, "w"), indent=2)
+        if response2answer is not None:
+            data['response2answer'] = response2answer[0] if args.joint_check else response2answer
+            json.dump(data, open(args.output_path, "w"), indent=2)
     
     # we want fine-grained results on each passage
     if args.retrieved2answer and 'retrieved2answer' not in data:
@@ -192,10 +205,13 @@ def check(args):
             batch_references=retrieved,
             batch_questions=questions,
             max_reference_segment_length=0,
-            merge_psg=False
+            merge_psg=False,
+            is_joint=args.joint_check,
+            with_rationale=args.with_rationale
         )  # [num_items, num_claims, num_passages]
-        data['retrieved2answer'] = retrieved2answer
-        json.dump(data, open(args.output_path, "w"), indent=2)
+        if retrieved2answer is not None:
+            data['retrieved2answer'] = retrieved2answer[0] if args.joint_check else retrieved2answer
+            json.dump(data, open(args.output_path, "w"), indent=2)
     
     
     if args.retrieved2response and 'retrieved2response' not in data:
@@ -205,10 +221,13 @@ def check(args):
             batch_references=retrieved,
             batch_questions=questions,
             max_reference_segment_length=0,
-            merge_psg=False
+            merge_psg=False,
+            is_joint=args.joint_check,
+            with_rationale=args.with_rationale
         )  # [num_items, num_claims, num_passages]
-        data["retrieved2response"] = retrieved2response
-        json.dump(data, open(args.output_path, "w"), indent=2)
+        if retrieved2response is not None:
+            data["retrieved2response"] = retrieved2response[0] if args.joint_check else retrieved2response
+            json.dump(data, open(args.output_path, "w"), indent=2)
 
 
 if __name__ == "__main__":
