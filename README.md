@@ -73,7 +73,7 @@ python ragchecker/cli.py \
     --metrics all
 ```
 
-Please refer to [RefChecker's guidance](https://github.com/amazon-science/RefChecker/tree/main?tab=readme-ov-file#choose-models-for-the-extractor-and-checker) for setting up the extractor and checker models.
+Please refer to [RefChecker's guidance](https://github.com/amazon-science/RefChecker/tree/main?tab=readme-ov-file#choose-models-for-the-extractor-and-checker) for setting up the extractor and checker models. (You may enable joint checking for better efficiency by adding the flag `--joint_check`.)
 
 It will output the values for the metrics like follows:
 
@@ -115,6 +115,7 @@ evaluator = RAGChecker(
     checker_name="bedrock/meta.llama3-70b-instruct-v1:0",
     batch_size_extractor=32,
     batch_size_checker=32,
+    # joint_check=True   # Enable joint_checking for better efficiency according to your needs
 )
 
 # evaluate results with selected metrics or certain groups, e.g., "retriever", "generator", "all"

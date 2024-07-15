@@ -23,17 +23,19 @@ class RAGChecker():
     checker_name : str
         Model used for checking whether the claims are factual.
     extracto_max_new_tokens : int, optional
-        Max generated tokens of the extractor, set a larger value for longer documents. Default: 1000
+        Max generated tokens of the extractor, set a larger value for longer documents. Default: 1000.
     extractor_api_base : str, optional
         API base URL for the extractor if using vllm deployed open source LLMs.
     checker_api_base : str, optional
         API base URL for the checker if using vllm deployed open source LLMs.
     batch_size_extractor : int, optional
-        Batch size for extractor. Default: 32
+        Batch size for extractor. Default: 32.
     batch_size_checker : int, optional
-        Batch size for checker. Default: 32
+        Batch size for checker. Default: 32.
     openai_api_key : str, optional
-        OpenAI API key for using OpenAI models.
+        OpenAI API key for using OpenAI models. Default: None.
+    joint_check: bool, optional
+        Enable joint checking of the claims. Default: False.
     """
     def __init__(
         self,
@@ -45,10 +47,12 @@ class RAGChecker():
         batch_size_extractor=32,
         batch_size_checker=32,
         openai_api_key=None,
+        joint_check=False
     ):
         if openai_api_key:
             os.environ['OPENAI_API_KEY'] = openai_api_key
         self.extractor_max_new_tokens = extractor_max_new_tokens
+        self.joint_check = joint_check
         self.extractor = LLMExtractor(
             model=extractor_name, 
             batch_size=batch_size_extractor,
@@ -150,7 +154,8 @@ class RAGChecker():
             batch_references=references,
             batch_questions=[ret.query for ret in results],
             max_reference_segment_length=0,
-            merge_psg=merge_psg
+            merge_psg=merge_psg,
+            is_joint=self.joint_check
         )
         for i, result in enumerate(results):
             if check_type == "answer2response":
