@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "ragchecker"
+version = "0.1.0"
+description = ""
+authors = [
+    "Xiangkun Hu <xiangkhu@amazon.com>",
+    "Lin Qiu <quln@amazon.com>",
+    "Tianhang Zhang <zzthang@amazon.com>",
+    "Dongyu Ru <rudongyu@amazon.com>",
+    "Peng Shi <penshi@amazon.com>",
+    "Shuaichen Chang <cshuaich@amazon.com>",
+]
+readme = "README.md"
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+refchecker = "^0.2.1"
+loguru = "^0.7"
+dataclasses-json = "^0.6"
+
+
+[tool.poetry.scripts]
+ragchecker-cli = "ragchecker.cli:main"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
