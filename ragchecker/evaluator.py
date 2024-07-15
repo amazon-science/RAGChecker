@@ -198,8 +198,9 @@ class RAGChecker():
         # compute the required intermediate results
         for requirement in requirements:
             self.check_claims(results, check_type=requirement)
-            with open(save_path, "w") as f:
-                f.write(results.to_json(indent=2))
+            if save_path is not None:
+                with open(save_path, "w") as f:
+                    f.write(results.to_json(indent=2))
 
         # compute the metrics
         for metric in all_metrics:
