@@ -167,7 +167,7 @@ class RAGChecker():
             else:
                 result.retrieved2response = checking_results[i]
         
-    def evaluate(self, results: RAGResults, metrics="all"):
+    def evaluate(self, results: RAGResults, metrics="all", save_path=None):
         """
         Evaluate the RAG results.
 
@@ -177,6 +177,8 @@ class RAGChecker():
             RAGResults object.
         metrics : str | list[str], optional
             List of metrics to compute. Default: 'all'.
+        save_path : str, optional
+            Path to save the results. Default: None. Will perform progress checkpointing if provided.
         """ 
         # identify the metrics and required intermediate results
         if isinstance(metrics, str):
@@ -196,7 +198,9 @@ class RAGChecker():
         # compute the required intermediate results
         for requirement in requirements:
             self.check_claims(results, check_type=requirement)
-        
+            with open(save_path, "w") as f:
+                f.write(results.to_json(indent=2))
+
         # compute the metrics
         for metric in all_metrics:
             for result in results.results:
