@@ -34,13 +34,13 @@ python -m spacy download en_core_web_sm
 ```
 
 
-### Run the Checking Pipeline
+### Run the Checking Pipeline with CLI
 
 Please process your own data with the same format as [examples/checking_inputs.json](./examples/checking_inputs.json). The only required annotation for each query is the `ground truth answer (gt_answer)`.
 
 ```json
 {
-  "input_data": [
+  "results": [
     {
       "query_id": "<query id>", # string
       "query": "<input query>", # string
@@ -59,57 +59,94 @@ Please process your own data with the same format as [examples/checking_inputs.j
 }
 ```
 
-If you are using AWS Bedrock version of Llama3 70B for the claim extractor and checker, use the following command to run the checking pipeline, the checking results will be saved to `--output_path`:
+If you are using AWS Bedrock version of Llama3 70B for the claim extractor and checker, use the following command to run the checking pipeline, the checking results as well as intermediate results will be saved to `--output_path`:
 
 
 ```bash
-python ragchecker/checking.py \
+python ragchecker/cli.py \
     --input_path=examples/checking_inputs.json \
     --output_path=examples/checking_outputs.json \
     --extractor_name=bedrock/meta.llama3-70b-instruct-v1:0 \
     --checker_name=bedrock/meta.llama3-70b-instruct-v1:0 \
     --batch_size_extractor=64 \
     --batch_size_checker=64 \
-    --answer2response \
-    --response2answer \
-    --retrieved2response \
-    --retrieved2answer
+    --metrics all
 ```
 
-Please refer to [RefChecker's guidance](https://github.com/amazon-science/RefChecker/tree/main?tab=readme-ov-file#choose-models-for-the-extractor-and-checker) for setting up the extractor and checker models.
-
-### Computing Metrics
-
-Use the following command for computing the metrics:
-
-```bash
-python ragchecker/rag_eval.py --file=examples/checking_outputs.json
-```
+Please refer to [RefChecker's guidance](https://github.com/amazon-science/RefChecker/tree/main?tab=readme-ov-file#choose-models-for-the-extractor-and-checker) for setting up the extractor and checker models. (You may enable joint checking for better efficiency by adding the flag `--joint_check`.)
 
 It will output the values for the metrics like follows:
 
 ```json
 Results for examples/checking_outputs.json:
 {
-  "overall_metrics": {
+  "overall": {
     "precision": 73.3,
     "recall": 62.5,
-    "f1": 67.5
+    "f1": 67.3
   },
-  "retriever_metrics": {
+  "retriever": {
     "claim_recall": 61.4,
     "context_precision": 87.5
   },
-  "generator_metrics": {
+  "generator": {
     "context_utilization": 87.5,
     "noise_sensitivity_in_relevant": 22.5,
     "noise_sensitivity_in_irrelevant": 0.0,
     "hallucination": 4.2,
     "self_knowledge": 25.0,
-    "faithfulness": 70.8,
-    "claim_count": 8,
+    "faithfulness": 70.8
   }
 }
+```
+
+### Run the Checking Pipeline with Python
+```python
+from ragchecker import RAGResults, RAGChecker
+
+
+# initialize ragresults from json/dict
+with open("examples/checking_inputs.json") as fp:
+    rag_results = RAGResults.from_json(fp.read())
+
+# set-up the evaluator
+evaluator = RAGChecker(
+    extractor_name="bedrock/meta.llama3-70b-instruct-v1:0",
+    checker_name="bedrock/meta.llama3-70b-instruct-v1:0",
+    batch_size_extractor=32,
+    batch_size_checker=32,
+    # joint_check=True   # Enable joint_checking for better efficiency according to your needs
+)
+
+# evaluate results with selected metrics or certain groups, e.g., "retriever", "generator", "all"
+evaluator.evaluate(rag_results, "all")
+print(rag_results)
+
+"""Output
+RAGResults(
+  2 RAG results,
+  Metrics:
+  {
+    "overall": {
+      "precision": 76.4,
+      "recall": 62.5,
+      "f1": 68.3
+    },
+    "retriever": {
+      "claim_recall": 61.4,
+      "context_precision": 87.5
+    },
+    "generator": {
+      "context_utilization": 87.5,
+      "noise_sensitivity_in_relevant": 19.1,
+      "noise_sensitivity_in_irrelevant": 0.0,
+      "hallucination": 4.5,
+      "self_knowledge": 27.3,
+      "faithfulness": 68.2
+    }
+  }
+)
+"""
 ```
 
 ## Meta-Evaluation
