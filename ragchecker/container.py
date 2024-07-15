@@ -18,7 +18,7 @@ class RAGResult:
     query: str
     gt_answer: str
     response: str
-    retrieved_context: List[RetrievedDoc]
+    retrieved_context: List[RetrievedDoc] | None = None # Retrieved documents
     response_claims: List[List[str]] | None = None  # List of claims for the response
     gt_answer_claims: List[List[str]] | None = None  # List of claims for the ground truth answer
     answer2response: List[str] | None = None  # entailment results of answer -> response
