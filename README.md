@@ -72,10 +72,10 @@ ragchecker.cli \
     --checker_name=bedrock/meta.llama3-70b-instruct-v1:0 \
     --batch_size_extractor=64 \
     --batch_size_checker=64 \
-    --metrics all
+    --metrics all_metrics
 ```
 
-Please refer to [RefChecker's guidance](https://github.com/amazon-science/RefChecker/tree/main?tab=readme-ov-file#choose-models-for-the-extractor-and-checker) for setting up the extractor and checker models. (You may enable joint checking for better efficiency by adding the flag `--joint_check`.)
+Please refer to [RefChecker's guidance](https://github.com/amazon-science/RefChecker/tree/main?tab=readme-ov-file#choose-models-for-the-extractor-and-checker) for setting up the extractor and checker models.
 
 It will output the values for the metrics like follows:
 
@@ -105,6 +105,7 @@ Results for examples/checking_outputs.json:
 ### Run the Checking Pipeline with Python
 ```python
 from ragchecker import RAGResults, RAGChecker
+from ragchecker.metrics import all_metrics
 
 
 # initialize ragresults from json/dict
@@ -116,12 +117,11 @@ evaluator = RAGChecker(
     extractor_name="bedrock/meta.llama3-70b-instruct-v1:0",
     checker_name="bedrock/meta.llama3-70b-instruct-v1:0",
     batch_size_extractor=32,
-    batch_size_checker=32,
-    # joint_check=True   # Enable joint_checking for better efficiency according to your needs
+    batch_size_checker=32
 )
 
-# evaluate results with selected metrics or certain groups, e.g., "retriever", "generator", "all"
-evaluator.evaluate(rag_results, "all")
+# evaluate results with selected metrics or certain groups, e.g., retriever_metrics, generator_metrics, all_metrics
+evaluator.evaluate(rag_results, all_metrics)
 print(rag_results)
 
 """Output
@@ -129,16 +129,16 @@ RAGResults(
   2 RAG results,
   Metrics:
   {
-    "overall": {
+    "overall_metrics": {
       "precision": 76.4,
       "recall": 62.5,
       "f1": 68.3
     },
-    "retriever": {
+    "retriever_metrics": {
       "claim_recall": 61.4,
       "context_precision": 87.5
     },
-    "generator": {
+    "generator_metrics": {
       "context_utilization": 87.5,
       "noise_sensitivity_in_relevant": 19.1,
       "noise_sensitivity_in_irrelevant": 0.0,

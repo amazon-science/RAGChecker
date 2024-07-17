@@ -35,7 +35,7 @@ class RAGChecker():
     openai_api_key : str, optional
         OpenAI API key for using OpenAI models. Default: None.
     joint_check: bool, optional
-        Enable joint checking of the claims. Default: False.
+        Enable joint checking of the claims. Default: True.
     """
     def __init__(
         self,
@@ -47,7 +47,7 @@ class RAGChecker():
         batch_size_extractor=32,
         batch_size_checker=32,
         openai_api_key=None,
-        joint_check=False
+        joint_check=True
     ):
         if openai_api_key:
             os.environ['OPENAI_API_KEY'] = openai_api_key

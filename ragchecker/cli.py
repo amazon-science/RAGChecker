@@ -54,10 +54,6 @@ def get_args():
     parser.add_argument(
         '--openai_api_key', type=str
     )
-    parser.add_argument(
-        '--joint_check', action='store_true',
-        help="Enable joint checking of the claims."
-    )
 
     return parser.parse_args()
 
@@ -72,8 +68,7 @@ def main():
         checker_api_base=args.checker_api_base,
         batch_size_extractor=args.batch_size_extractor,
         batch_size_checker=args.batch_size_checker,
-        openai_api_key=args.openai_api_key,
-        joint_check=args.joint_check
+        openai_api_key=args.openai_api_key
     )
     with open(args.input_path, "r") as f:
         rag_results = RAGResults.from_json(f.read())
