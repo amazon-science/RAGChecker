@@ -29,7 +29,9 @@ RAGChecker empowers developers and researchers to thoroughly evaluate, diagnose,
 ### Setup Environment
 
 ```bash
-pip install -r requirements
+git clone https://github.com/amazon-science/RAGChecker.git
+cd RAGChecker
+pip install .
 python -m spacy download en_core_web_sm
 ```
 
