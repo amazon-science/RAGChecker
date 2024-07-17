@@ -65,7 +65,7 @@ If you are using AWS Bedrock version of Llama3 70B for the claim extractor and c
 
 
 ```bash
-python ragchecker/cli.py \
+ragchecker.cli \
     --input_path=examples/checking_inputs.json \
     --output_path=examples/checking_outputs.json \
     --extractor_name=bedrock/meta.llama3-70b-instruct-v1:0 \
