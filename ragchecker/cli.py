@@ -4,6 +4,7 @@ from argparse import ArgumentParser, RawTextHelpFormatter
 
 from .evaluator import RAGChecker
 from .container import RAGResults
+from .metrics import *
 
 
 def get_args():
@@ -47,7 +48,7 @@ def get_args():
     
     # checking options
     parser.add_argument(
-        '--metrics', type=str, nargs='+', default=["all"],
+        '--metrics', type=str, nargs='+', default=[all_metrics],
         help='Metrics to evaluate the results.'
     )
     parser.add_argument(

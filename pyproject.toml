@@ -14,7 +14,7 @@ readme = "README.md"
 license = "Apache-2.0"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.9"
 refchecker = "^0.2.1"
 loguru = "^0.7"
 dataclasses-json = "^0.6"

@@ -9,8 +9,8 @@ from loguru import logger
 import numpy as np
 
 from .container import RAGResults, RAGResult
-from .metrics import METRIC_REQUIREMENTS, METRIC_GROUP_MAP, METRIC_FUNC_MAP
-
+from .metrics import *
+from .computation import METRIC_FUNC_MAP
 
 class RAGChecker():
     """
@@ -167,7 +167,7 @@ class RAGChecker():
             else:
                 result.retrieved2response = checking_results[i]
         
-    def evaluate(self, results: RAGResults, metrics="all", save_path=None):
+    def evaluate(self, results: RAGResults, metrics=all_metrics, save_path=None):
         """
         Evaluate the RAG results.
 
@@ -183,16 +183,16 @@ class RAGChecker():
         # identify the metrics and required intermediate results
         if isinstance(metrics, str):
             metrics = [metrics]
-        all_metrics = set()
+        ret_metrics = set()
         requirements = set()
         for metric in metrics:
             if metric not in METRIC_REQUIREMENTS:
                 if metric not in METRIC_GROUP_MAP:
                     raise ValueError(f"Invalid metric: {metric}.")
-                all_metrics.update(METRIC_GROUP_MAP[metric])
+                ret_metrics.update(METRIC_GROUP_MAP[metric])
             else:
-                all_metrics.add(metric)
-        for metric in all_metrics:
+                ret_metrics.add(metric)
+        for metric in ret_metrics:
             requirements.update(METRIC_REQUIREMENTS[metric])
         
         # compute the required intermediate results
@@ -203,16 +203,16 @@ class RAGChecker():
                     f.write(results.to_json(indent=2))
 
         # compute the metrics
-        for metric in all_metrics:
+        for metric in ret_metrics:
             for result in results.results:
                 METRIC_FUNC_MAP[metric](result)
         
         # aggregate the metrics
         for group, group_metrics in METRIC_GROUP_MAP.items():
-            if group == "all":
+            if group == all_metrics:
                 continue
             for metric in group_metrics:
-                if metric in all_metrics:
+                if metric in ret_metrics:
                     results.metrics[group][metric] = round(np.mean(
                         [result.metrics[metric] for result in results.results]
                     ) * 100, 1)

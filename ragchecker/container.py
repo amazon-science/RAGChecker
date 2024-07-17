@@ -2,7 +2,7 @@ import json
 from typing import List
 from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
-
+from . import metrics
 
 @dataclass_json
 @dataclass
@@ -33,9 +33,9 @@ class RAGResult:
 class RAGResults:
     results: List[RAGResult] = field(default_factory=list)
     metrics: dict[str, dict[str, float]] = field(default_factory = lambda: {
-        "overall": {},
-        "retriever": {},
-        "generator": {}
+        metrics.overall_metrics: {},
+        metrics.retriever_metrics: {},
+        metrics.generator_metrics: {}
     })
 
     def __repr__(self) -> str:
@@ -48,9 +48,9 @@ class RAGResults:
     def update(self, rag_result: List[RAGResult]):
         self.results.append(rag_result)
         self.metrics = {
-            "overall_metrics": {},
-            "retriever_metrics": {},
-            "generator_metrics": {}
+            metrics.overall_metrics: {},
+            metrics.retriever_metrics: {},
+            metrics.generator_metrics: {}
         }
 
 
