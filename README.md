@@ -29,9 +29,7 @@ RAGChecker empowers developers and researchers to thoroughly evaluate, diagnose,
 ### Setup Environment
 
 ```bash
-git clone https://github.com/amazon-science/RAGChecker.git
-cd RAGChecker
-pip install .
+pip install ragchecker
 python -m spacy download en_core_web_sm
 ```
 
@@ -65,7 +63,7 @@ If you are using AWS Bedrock version of Llama3 70B for the claim extractor and c
 
 
 ```bash
-ragchecker.cli \
+ragchecker-cli \
     --input_path=examples/checking_inputs.json \
     --output_path=examples/checking_outputs.json \
     --extractor_name=bedrock/meta.llama3-70b-instruct-v1:0 \
@@ -82,16 +80,16 @@ It will output the values for the metrics like follows:
 ```json
 Results for examples/checking_outputs.json:
 {
-  "overall": {
+  "overall_metrics": {
     "precision": 73.3,
     "recall": 62.5,
     "f1": 67.3
   },
-  "retriever": {
+  "retriever_metrics": {
     "claim_recall": 61.4,
     "context_precision": 87.5
   },
-  "generator": {
+  "generator_metrics": {
     "context_utilization": 87.5,
     "noise_sensitivity_in_relevant": 22.5,
     "noise_sensitivity_in_irrelevant": 0.0,
