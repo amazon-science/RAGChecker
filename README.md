@@ -153,6 +153,10 @@ RAGResults(
 
 Please refer to [data/meta_evaluation](./data/meta_evaluation/README.md) on meta-evaluation for the effectiveness of RAGChecker.
 
+## Work with LlamaIndex
+
+RAGChecker now integrates with LlamaIndex, providing a powerful evaluation tool for RAG applications built with LlamaIndex. For detailed instructions on how to use RAGChecker with LlamaIndex, please refer to the [LlamaIndex documentation on RAGChecker integration](https://docs.llamaindex.ai/en/latest/examples/evaluation/RAGChecker/). This integration allows LlamaIndex users to leverage RAGChecker's comprehensive metrics to evaluate and improve their RAG systems.
+
 ## Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
