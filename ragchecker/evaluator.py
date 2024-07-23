@@ -19,9 +19,9 @@ class RAGChecker():
     Parameters
     ----------
     extractor_name : str
-        Model used for extracting claims.
+        Model used for extracting claims. Default: "bedrock/meta.llama3-70b-instruct-v1:0".
     checker_name : str
-        Model used for checking whether the claims are factual.
+        Model used for checking whether the claims are factual. Default: "bedrock/meta.llama3-70b-instruct-v1:0".
     extracto_max_new_tokens : int, optional
         Max generated tokens of the extractor, set a larger value for longer documents. Default: 1000.
     extractor_api_base : str, optional
@@ -36,23 +36,28 @@ class RAGChecker():
         OpenAI API key for using OpenAI models. Default: None.
     joint_check: bool, optional
         Enable joint checking of the claims. Default: True.
+    joint_check_num: int, optional
+        Number of claims to check jointly in one prompt. Default: 5.
     """
     def __init__(
         self,
-        extractor_name,
-        checker_name,
+        extractor_name="bedrock/meta.llama3-70b-instruct-v1:0",
+        checker_name="bedrock/meta.llama3-70b-instruct-v1:0",
         extractor_max_new_tokens=1000,
         extractor_api_base=None,
         checker_api_base=None,
         batch_size_extractor=32,
         batch_size_checker=32,
         openai_api_key=None,
-        joint_check=True
+        joint_check=True,
+        joint_check_num=5
     ):
         if openai_api_key:
             os.environ['OPENAI_API_KEY'] = openai_api_key
         self.extractor_max_new_tokens = extractor_max_new_tokens
         self.joint_check = joint_check
+        self.joint_check_num = joint_check_num
+        
         self.extractor = LLMExtractor(
             model=extractor_name, 
             batch_size=batch_size_extractor,
@@ -155,7 +160,8 @@ class RAGChecker():
             batch_questions=[ret.query for ret in results],
             max_reference_segment_length=0,
             merge_psg=merge_psg,
-            is_joint=self.joint_check
+            is_joint=self.joint_check,
+            joint_check_num=self.joint_check_num
         )
         for i, result in enumerate(results):
             if check_type == "answer2response":

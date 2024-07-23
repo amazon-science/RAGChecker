@@ -18,12 +18,12 @@ def get_args():
         help="Output path to the result json file."
     )
     parser.add_argument(
-        '--extractor_name', type=str,
-        help="Model used for extracting claims."
+        '--extractor_name', type=str, default="bedrock/meta.llama3-70b-instruct-v1:0",
+        help="Model used for extracting claims. Default: bedrock/meta.llama3-70b-instruct-v1:0"
     )
     parser.add_argument(
-        '--extractor_api_base', type=str,
-        help='API base URL for the extractor if using vllm deployed open source LLMs.'
+        '--extractor_api_base', type=str, default="bedrock/meta.llama3-70b-instruct-v1:0",
+        help='API base URL for the extractor if using vllm deployed open source LLMs. Default: bedrock/meta.llama3-70b-instruct-v1:0'
     )
     parser.add_argument(
         '--extractor_max_new_tokens', type=int, default=1000,
