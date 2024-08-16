@@ -24,6 +24,26 @@ RAGChecker is an advanced automatic evaluation framework designed to assess and 
 RAGChecker empowers developers and researchers to thoroughly evaluate, diagnose, and enhance their RAG systems with precision and depth.
 
 
+## 🔥 News
+- [08/16/2024] RAGChecker paper is on arXiv: https://arxiv.org/pdf/2408.08067
+
+
+## ❤️ Citation
+RAGChecker paper: https://arxiv.org/pdf/2408.08067
+
+If you use RAGChecker in your work, please cite us:
+```bibtex
+@misc{ru2024ragcheckerfinegrainedframeworkdiagnosing,
+      title={RAGChecker: A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation}, 
+      author={Dongyu Ru and Lin Qiu and Xiangkun Hu and Tianhang Zhang and Peng Shi and Shuaichen Chang and Jiayang Cheng and Cunxiang Wang and Shichao Sun and Huanyu Li and Zizhao Zhang and Binjie Wang and Jiarong Jiang and Tong He and Zhiguo Wang and Pengfei Liu and Yue Zhang and Zheng Zhang},
+      year={2024},
+      eprint={2408.08067},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2408.08067}, 
+}
+```
+
 ## 🚀 Quick Start
 
 ### Setup Environment
