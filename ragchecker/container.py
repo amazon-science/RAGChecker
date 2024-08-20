@@ -52,10 +52,3 @@ class RAGResults:
             metrics.retriever_metrics: {},
             metrics.generator_metrics: {}
         }
-
-
-if __name__ == "__main__":
-    doc = RetrievedDoc.from_dict({"doc_id": "1", "text": "Hello world"})
-    print(doc)
-    rag_result = RAGResult()
-    print(rag_result.to_dict())
