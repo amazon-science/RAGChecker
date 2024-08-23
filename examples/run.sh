@@ -5,4 +5,4 @@ python -m ragchecker.cli \
     --checker_name=bedrock/meta.llama3-70b-instruct-v1:0 \
     --batch_size_extractor=64 \
     --batch_size_checker=64 \
-    --metrics all
+    --metrics all_metrics
