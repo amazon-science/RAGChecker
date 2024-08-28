@@ -90,7 +90,8 @@ ragchecker-cli \
     --checker_name=bedrock/meta.llama3-70b-instruct-v1:0 \
     --batch_size_extractor=64 \
     --batch_size_checker=64 \
-    --metrics all_metrics
+    --metrics all_metrics \
+    # --disable_joint_check  # uncomment this line for one-by-one checking, slower but slightly more accurate
 ```
 
 Please refer to [RefChecker's guidance](https://github.com/amazon-science/RefChecker/tree/main?tab=readme-ov-file#choose-models-for-the-extractor-and-checker) for setting up the extractor and checker models.
