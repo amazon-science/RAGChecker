@@ -59,6 +59,10 @@ def get_args():
         help="Disable joint checking of the claims."
     )
     parser.set_defaults(joint_check=True)
+    parser.add_argument(
+        "--joint_check_num", type=int, default=5
+    )
+
 
     return parser.parse_args()
 
@@ -75,6 +79,7 @@ def main():
         batch_size_checker=args.batch_size_checker,
         openai_api_key=args.openai_api_key,
         joint_check=args.joint_check,
+        joint_check_num=args.joint_check_num
     )
     with open(args.input_path, "r") as f:
         rag_results = RAGResults.from_json(f.read())

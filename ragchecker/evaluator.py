@@ -50,13 +50,15 @@ class RAGChecker():
         batch_size_checker=32,
         openai_api_key=None,
         joint_check=True,
-        joint_check_num=5
+        joint_check_num=5,
+        **kwargs
     ):
         if openai_api_key:
             os.environ['OPENAI_API_KEY'] = openai_api_key
         self.extractor_max_new_tokens = extractor_max_new_tokens
         self.joint_check = joint_check
         self.joint_check_num = joint_check_num
+        self.kwargs = kwargs
         
         self.extractor = LLMExtractor(
             model=extractor_name, 
@@ -102,7 +104,8 @@ class RAGChecker():
         extraction_results = self.extractor.extract(
             batch_responses=texts,
             batch_questions=questions,
-            max_new_tokens=self.extractor_max_new_tokens
+            max_new_tokens=self.extractor_max_new_tokens,
+            **self.kwargs
         )
         claims = [[c.content for c in res.claims] for res in extraction_results]
         for i, result in enumerate(results):
@@ -161,7 +164,8 @@ class RAGChecker():
             max_reference_segment_length=0,
             merge_psg=merge_psg,
             is_joint=self.joint_check,
-            joint_check_num=self.joint_check_num
+            joint_check_num=self.joint_check_num,
+            **self.kwargs
         )
         for i, result in enumerate(results):
             if check_type == "answer2response":
