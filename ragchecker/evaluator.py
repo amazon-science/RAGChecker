@@ -226,5 +226,10 @@ class RAGChecker():
                     results.metrics[group][metric] = round(np.mean(
                         [result.metrics[metric] for result in results.results]
                     ) * 100, 1)
+        
+        # save the results            
+        if save_path is not None:
+                with open(save_path, "w") as f:
+                    f.write(results.to_json(indent=2))
 
         return results.metrics
