@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ragchecker"
-version = "0.1.5"
+version = "0.1.6"
 description = "RAGChecker: A Fine-grained Framework For Diagnosing Retrieval-Augmented Generation (RAG) systems."
 authors = [
     "Xiangkun Hu <xiangkhu@amazon.com>",
