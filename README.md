@@ -1,5 +1,9 @@
 # RAGChecker: A Fine-grained Framework For Diagnosing RAG
 
+<p align="center">
+<a href="https://arxiv.org/pdf/2408.08067">RAGChecker Paper</a> &nbsp&nbsp | &nbsp&nbsp <a href="./tutorial/ragchecker_tutorial_en.md">Tutorial (English)</a> &nbsp&nbsp ｜ &nbsp&nbsp <a href="./tutorial/ragchecker_tutorial_zh.md">中文教程</a>
+</p>
+
 RAGChecker is an advanced automatic evaluation framework designed to assess and diagnose Retrieval-Augmented Generation (RAG) systems. It provides a comprehensive suite of metrics and tools for in-depth analysis of RAG performance.
 
 <p align="center">
@@ -86,8 +90,8 @@ If you are using AWS Bedrock version of Llama3 70B for the claim extractor and c
 ragchecker-cli \
     --input_path=examples/checking_inputs.json \
     --output_path=examples/checking_outputs.json \
-    --extractor_name=bedrock/meta.llama3-70b-instruct-v1:0 \
-    --checker_name=bedrock/meta.llama3-70b-instruct-v1:0 \
+    --extractor_name=bedrock/meta.llama3-1-70b-instruct-v1:0 \
+    --checker_name=bedrock/meta.llama3-1-70b-instruct-v1:0 \
     --batch_size_extractor=64 \
     --batch_size_checker=64 \
     --metrics all_metrics \
@@ -133,8 +137,8 @@ with open("examples/checking_inputs.json") as fp:
 
 # set-up the evaluator
 evaluator = RAGChecker(
-    extractor_name="bedrock/meta.llama3-70b-instruct-v1:0",
-    checker_name="bedrock/meta.llama3-70b-instruct-v1:0",
+    extractor_name="bedrock/meta.llama3-1-70b-instruct-v1:0",
+    checker_name="bedrock/meta.llama3-1-70b-instruct-v1:0",
     batch_size_extractor=32,
     batch_size_checker=32
 )
