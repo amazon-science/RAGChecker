@@ -1,0 +1,2144 @@
+{
+  "7B3_golden.json": [
+    {
+      "id": "5c6d8f4c7c78d6947100003f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c6da11e7c78d69471000042",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c5205137e3cb0e231000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c5214207e3cb0e231000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c5b4a941a4c55d80b000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c608f0cc01990ff41000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c51f16307ef653866000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c544c1707647bbc4b000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c51fb7a07ef653866000006",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c56c5e107647bbc4b000012",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c58282e07647bbc4b00001e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c58db1386df2b9174000014",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c5b268986df2b9174000019",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c5b52731a4c55d80b000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c6d97497c78d69471000040",
+      "ideal_answer_index": 0
+    }
+  ],
+  "5B5_golden.json": [
+    {
+      "id": "58965c5578275d0c4a00000f",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "58946d6e7d9090f353000005",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58e9f0ba3e8b6dc87c00000e",
+      "ideal_answer_index": 4
+    },
+    {
+      "id": "589317e849702f2e01000005",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58eb984aeda5a57672000008",
+      "ideal_answer_index": 4
+    },
+    {
+      "id": "5880a46d3d0145644d000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58eb4ce7eda5a57672000004",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "58815f26713cbdfd3d000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58853c56e56acf5176000018",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5891c2e7621ea6ff7e00000f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5895f18ce370baff39000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58e640573e8b6dc87c000003",
+      "ideal_answer_index": 5
+    },
+    {
+      "id": "589635dd78275d0c4a000009",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5880b036c872c95565000002",
+      "ideal_answer_index": 0
+    }
+  ],
+  "2B3_golden.json": [
+    {
+      "id": "52e7b4a198d023950500001b",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "52f3a9ef2059c6d71c000012",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "5311ceeae3eabad021000008",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "53177803b166e2b80600000e",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "531778ddb166e2b80600000f",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "53265dd4d6d3ac6a34000007",
+      "ideal_answer_index": null
+    }
+  ],
+  "8B1_golden.json": [
+    {
+      "id": "5c7019557c78d6947100005f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e36d924b5b409ea5300000b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e2e136bfbd6abf43b000023",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c72768a7c78d6947100006c",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e35cb27158f994d3a000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e2a0a02aa19d7443100000b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e35c4ea9be68b5512000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e490d276d0a277941000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5ca61b14ecadf2e73f00004f",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5e4981e96d0a277941000009",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c72c9207c78d6947100007b",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5c74285c7c78d694710000a3",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5e2d80cafbd6abf43b00000d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e2b0d167d50947c2f000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e369c30b5b409ea53000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e2a120c76af173751000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c7006037c78d6947100005d",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5e2deb35fbd6abf43b00001c",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e29fc57aa19d74431000006",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c74305d7c78d694710000a4",
+      "ideal_answer_index": 0
+    }
+  ],
+  "11B2_golden.json": [
+    {
+      "id": "6415c5d4690f196b51000014",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "642321a5690f196b51000047",
+      "ideal_answer_index": 11
+    }
+  ],
+  "9B2_golden.json": [
+    {
+      "id": "5e4565c63f54159529000001",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "602969061cb411341a000114",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "602c21501cb411341a000121",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6031287e1cb411341a00012d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "602a87c71cb411341a000117",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6030fcb51cb411341a000127",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "601d76311cb411341a000045",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "60290a131cb411341a000109",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6028204c1cb411341a0000f6",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "6033fae11cb411341a00014d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6028183e1cb411341a0000f1",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "60296ace1cb411341a000115",
+      "ideal_answer_index": 2
+    }
+  ],
+  "10B1_golden.json": [
+    {
+      "id": "5fdb4176a43ad3127800001a",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "62058382c9dfcb9c09000031",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5fe3131da43ad31278000049",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5fdb4100a43ad31278000015",
+      "ideal_answer_index": 6
+    },
+    {
+      "id": "605fb19794d57fd879000038",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6028f5851cb411341a0000ff",
+      "ideal_answer_index": 0
+    }
+  ],
+  "4B4_golden.json": [
+    {
+      "id": "56c44ce83aaba2a675000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56b1f4300a360a5e4500001b",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "56c8f4615795f9a73e00001a",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56af7b820a360a5e45000014",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56b8ccc5156496395c000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56c0ea0aef6e394741000029",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56c234a4ef6e394741000059",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56c322d750c68dd416000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56d1a9baab2fed4a47000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56c8f7445795f9a73e00001b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56b3efc38525abca1e000006",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56b2863945561f0573000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5709152ecf1c325851000014",
+      "ideal_answer_index": 4
+    },
+    {
+      "id": "56d1d56b67f0cb3d66000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56cdf4875795f9a73e000040",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "57090c33cf1c325851000013",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "570921e4cf1c325851000017",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "57092332cf1c325851000018",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56bdc452a36a056b3d000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56c06ef5ef6e39474100001e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56c1d85fef6e394741000036",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56c23652ef6e39474100005a",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56d1ddd267f0cb3d66000008",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56fcf1b8cf1c325851000005",
+      "ideal_answer_index": 4
+    },
+    {
+      "id": "56b9cabbac7ad10019000002",
+      "ideal_answer_index": 0
+    }
+  ],
+  "6B2_golden.json": [
+    {
+      "id": "5a805974faa1ab7d2e000020",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a8053effaa1ab7d2e00001e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a76dd749e632bc066000008",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a761ac7aacfb9cd4c000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a86e66dfaa1ab7d2e000035",
+      "ideal_answer_index": 5
+    },
+    {
+      "id": "5a895f51fcd1d6a10c000004",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5a870b7bfaa1ab7d2e00003d",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5a80a63ffaa1ab7d2e000023",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6e3155b750ff445500003f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6fabfeb750ff4455000062",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a86ebf2faa1ab7d2e000038",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5a86c938faa1ab7d2e000034",
+      "ideal_answer_index": 4
+    }
+  ],
+  "7B1_golden.json": [
+    {
+      "id": "5acf74460340b9f058000013",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5c2f669e133db5eb78000031",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c59872b86df2b9174000017",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c5207377e3cb0e231000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c522b487e3cb0e231000008",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c580aff07647bbc4b00001a",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c5824cf07647bbc4b00001d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c34b45eda8336e21a000008",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5c597a5086df2b9174000016",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c52ca7c7e3cb0e23100000d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c54496907647bbc4b000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5be2a070133db5eb78000013",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c56b96e07647bbc4b000010",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c54600207647bbc4b000004",
+      "ideal_answer_index": 0
+    }
+  ],
+  "8B3_golden.json": [
+    {
+      "id": "5e4adb486d0a277941000015",
+      "ideal_answer_index": 7
+    },
+    {
+      "id": "5e51a7ec6d0a27794100003b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e3356c0fbd6abf43b00005c",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5d35c227b3a6380763000007",
+      "ideal_answer_index": 4
+    },
+    {
+      "id": "5d35e7ddb3a638076300000e",
+      "ideal_answer_index": 4
+    },
+    {
+      "id": "5e36994092b3349b55000002",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5d36b5087bc3fee31f000008",
+      "ideal_answer_index": 5
+    },
+    {
+      "id": "5d35ebe7b3a6380763000010",
+      "ideal_answer_index": 6
+    },
+    {
+      "id": "5e763366c6a8763d2300000b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e2e0fa2fbd6abf43b00001f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5d36b4817bc3fee31f000007",
+      "ideal_answer_index": 12
+    },
+    {
+      "id": "5d35e421b3a638076300000d",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5e550758b761aafe09000005",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e2f6353fbd6abf43b00002b",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5e51dab06d0a27794100003d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5d35dfbdb3a638076300000b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e4ada686d0a277941000014",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5e46fef23f54159529000014",
+      "ideal_answer_index": 0
+    }
+  ],
+  "2B1_golden.json": [
+    {
+      "id": "52bf1cb303868f1b0600000b",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "52e7bbf698d023950500001d",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "52f1287d2059c6d71c000008",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "52f65f372059c6d71c000027",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "52f89f4f2059c6d71c00004e",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "52f89fba2059c6d71c00004f",
+      "ideal_answer_index": null
+    }
+  ],
+  "3B2_golden.json": [
+    {
+      "id": "54e0dfa91388e8454a000018",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5506a7a48e1671127b000008",
+      "ideal_answer_index": 5
+    },
+    {
+      "id": "550712739d0faaa527000008",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5507ea9a0195c16935000008",
+      "ideal_answer_index": 0
+    }
+  ],
+  "10B3_golden.json": [
+    {
+      "id": "61f97372882a024a10000051",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "61f9cc19c9dfcb9c09000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "61f86f58882a024a10000046",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "61f86db9882a024a10000045",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "620058b3c9dfcb9c09000016",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6060e30a94d57fd87900004a",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "61f919cc882a024a10000048",
+      "ideal_answer_index": 0
+    }
+  ],
+  "8B5_golden.json": [
+    {
+      "id": "5d387360a1e1595105000007",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5e822615835f4e4777000034",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e51de866d0a27794100003f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e49c2356d0a277941000010",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5e52a4ec6d0a277941000044",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5d36bb777bc3fee31f00000a",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5d38577b7bc3fee31f000017",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5d387e24a1e1595105000011",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e52af9e6d0a277941000048",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5d3880eea1e1595105000014",
+      "ideal_answer_index": 6
+    },
+    {
+      "id": "5e52c0c76d0a27794100004b",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5d3858a97bc3fee31f000018",
+      "ideal_answer_index": 6
+    },
+    {
+      "id": "5e52937c6d0a277941000042",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e80caeb835f4e477700002b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e52a3416d0a277941000043",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5d388535a1e1595105000018",
+      "ideal_answer_index": 8
+    },
+    {
+      "id": "5e2b00bc76af173751000004",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5e52add36d0a277941000047",
+      "ideal_answer_index": 1
+    }
+  ],
+  "10B5_golden.json": [
+    {
+      "id": "62015485c9dfcb9c09000023",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6239ec36f0baec9a1b000001",
+      "ideal_answer_index": 0
+    }
+  ],
+  "3B4_golden.json": [
+    {
+      "id": "550aef0ec2af5d5b7000000a",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "551173c26a8cde6b72000004",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5512cce26a8cde6b7200000c",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "552faa43bc4f83e828000004",
+      "ideal_answer_index": 0
+    }
+  ],
+  "6B4_golden.json": [
+    {
+      "id": "5a763b679e632bc066000006",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a8b27e6fcd1d6a10c00001e",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5a76179d83b0d9ea66000021",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a804f71faa1ab7d2e00001d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a8056a2faa1ab7d2e00001f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a7339372dc08e987e000013",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a8b292afcd1d6a10c00001f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a7633a89e632bc066000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a76420c9e632bc066000007",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a99332a1d1251d03b00000e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a9d2a8f1d1251d03b000019",
+      "ideal_answer_index": 0
+    }
+  ],
+  "4B2_golden.json": [
+    {
+      "id": "56a3a6c9496b62f23f000008",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "569e7e99ceceede94d000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56d1d14567f0cb3d66000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56e460d051531f7e33000019",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56accec70a360a5e45000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56cf50253975bb303a00000b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56a37e33496b62f23f000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56a3a8c7496b62f23f000009",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "569e79ecceceede94d000002",
+      "ideal_answer_index": 0
+    }
+  ],
+  "5B1_golden.json": [
+    {
+      "id": "587f57f692a5b8ad44000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58837dd72305cd7e21000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5880acbb0a76a87357000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "589afa6978275d0c4a000039",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5891c90949702f2e01000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "587e42032420191125000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "587e3f4e2420191125000003",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5896399978275d0c4a00000b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "587e07023ec846c24f000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "587e2a0cc32c812009000001",
+      "ideal_answer_index": 0
+    }
+  ],
+  "2B5_golden.json": [
+    {
+      "id": "5311bcc2e3eabad021000005",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "5319abe4b166e2b80600002e",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "5319ac99b166e2b806000034",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "532ad531d6d3ac6a34000013",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "532b15ecd6d3ac6a34000014",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "532f043ed6d3ac6a34000023",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "533eb89fc45e133714000012",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "534eb34b288f4dae47000002",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "5358e067f1005d6b5800000b",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "535d78137d100faa09000005",
+      "ideal_answer_index": null
+    }
+  ],
+  "9B4_golden.json": [
+    {
+      "id": "6060701c94d57fd87900003c",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "601eba711cb411341a000059",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5fdb1023a43ad31278000009",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5fdb2ee4a43ad3127800000f",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "60290f741cb411341a00010b",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "6060732b94d57fd87900003d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "603256981cb411341a00013c",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "6028f6781cb411341a000100",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "603251f81cb411341a00013a",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "601ebba41cb411341a00005a",
+      "ideal_answer_index": 0
+    }
+  ],
+  "5B3_golden.json": [
+    {
+      "id": "58d0dc878acda34529000004",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "58a71bb960087bc10a00002d",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "587e1a01fc7e8dd84f000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58a71f7460087bc10a00002e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5896381a78275d0c4a00000a",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58967c9978275d0c4a000011",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58ab1f6c9ef3c34033000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58adb9919ef3c34033000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "588383172305cd7e21000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58de71fa8acda3452900002c",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "58de34608acda3452900002b",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "587e392d2420191125000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "589474467d9090f353000006",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58adc1ff9ef3c34033000006",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5891c754621ea6ff7e000011",
+      "ideal_answer_index": 0
+    }
+  ],
+  "7B5_golden.json": [
+    {
+      "id": "5c8960a6f9c2ba6b28000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c8a8f56d558e5f23200000b",
+      "ideal_answer_index": 0
+    }
+  ],
+  "4B3_golden.json": [
+    {
+      "id": "56ae3cdc0a360a5e45000008",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56ae57350a360a5e4500000a",
+      "ideal_answer_index": 6
+    },
+    {
+      "id": "569ed752ceceede94d000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56ae35bc0a360a5e45000007",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56ebee26107309bc2f000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56f3f6b12ac5ed145900001a",
+      "ideal_answer_index": 6
+    },
+    {
+      "id": "56ae5a8a0a360a5e4500000b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56ae6e650a360a5e4500000e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56ae40110a360a5e45000009",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56a3bf0f496b62f23f00000a",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56a8b1a5a17756b72f000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56cdf3995795f9a73e00003a",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "56a7d5afa17756b72f000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56f3f0f02ac5ed1459000017",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "56ae2fab0a360a5e45000006",
+      "ideal_answer_index": 0
+    }
+  ],
+  "6B5_golden.json": [
+    {
+      "id": "5ac24c9495d0062724000002",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5abc9ecffcf4565872000021",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a896c26fcd1d6a10c000007",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5a885add61bb38fb24000017",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5a86e6fafaa1ab7d2e000036",
+      "ideal_answer_index": 10
+    }
+  ],
+  "10B4_golden.json": [
+    {
+      "id": "6202fa3cc9dfcb9c0900002c",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6201a06fc9dfcb9c09000026",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "620157bec9dfcb9c09000025",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "62068e67c9dfcb9c09000038",
+      "ideal_answer_index": 0
+    }
+  ],
+  "3B5_golden.json": [
+    {
+      "id": "530cf22aa177c6630c000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "530cf22aa177c6630c000004",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "553a54babc4f83e828000019",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "553ba7b7f321868558000006",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "553ca8d8f32186855800000d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "553cae13f32186855800000e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "553ccbaef32186855800000f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "553cf397f321868558000010",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "553e07caf321868558000016",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "553e1aa5a3cf796f71000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "553f8bc11d53b76422000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "55413142182542114d000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "55414e4f472cfd8617000002",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5541ffc3472cfd8617000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "55423875ec76f5e50c000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "55425615ed966d112c000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "55435a46ed966d112c000006",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5544e4635beec11c10000007",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "55451e53bf90a13052000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5545d847bf90a13052000006",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5545e65bd355485447000001",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5545e926d355485447000002",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "554614bcd355485447000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "554763f0f35db75526000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5547a7e9f35db75526000006",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5549f7a1f35db7552600000d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "554a0cadf35db7552600000f",
+      "ideal_answer_index": 0
+    }
+  ],
+  "8B4_golden.json": [
+    {
+      "id": "5d38790da1e159510500000d",
+      "ideal_answer_index": 9
+    },
+    {
+      "id": "5e35dc26158f994d3a000006",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e6de9441af46fc130000023",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e36cf8eb5b409ea53000007",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e30b870fbd6abf43b000038",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5e3e8b1c48dab47f26000008",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5e35d7cd158f994d3a000005",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5e36d5b9b5b409ea53000009",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5e2d7ceefbd6abf43b00000b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5d38663da1e1595105000001",
+      "ideal_answer_index": 8
+    },
+    {
+      "id": "5e6e767e51b80c9423000006",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e4946bf6d0a277941000005",
+      "ideal_answer_index": 0
+    }
+  ],
+  "7B4_golden.json": [
+    {
+      "id": "5c61f767e842deac67000007",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c63286ae842deac6700000e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c642fbce842deac67000014",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c8962e8d558e5f232000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c6445f0e842deac67000017",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c65ae757c78d6947100000a",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c65b2e87c78d6947100000b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c6ab4c17c78d6947100001d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c8feae70101eac87000000e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c6acb107c78d6947100001f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c8fef490101eac870000010",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c6d65637c78d69471000038",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c632cc1e842deac6700000f",
+      "ideal_answer_index": 0
+    }
+  ],
+  "5B2_golden.json": [
+    {
+      "id": "588533cee56acf5176000014",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "589480b47d9090f353000007",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "588800f43b87a8a738000009",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "587d36ab859bf79568000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "588f2de394c1512c50000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58bc363622d300530900001f",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "58bc640002b8c60953000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "587e1bfdfc7e8dd84f000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "587f90fa8ce3255b64000002",
+      "ideal_answer_index": 0
+    }
+  ],
+  "4B1_golden.json": [
+    {
+      "id": "56cae60f5795f9a73e00002b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56caea805795f9a73e00002c",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "56b8a525156496395c000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56c332a350c68dd41600000d",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "56c073fcef6e394741000020",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "569e6c68ca240fa209000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56d2ae19f22319765a000006",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56d19a363975bb303a000017",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56afe6d40a360a5e45000017",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56c3104c50c68dd416000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56c2fbd91e69116444000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56a39d60496b62f23f000006",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56c5ade15795f9a73e000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "56cb9b065795f9a73e000032",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "56c9f9d95795f9a73e00001e",
+      "ideal_answer_index": 1
+    }
+  ],
+  "10B6_golden.json": [
+    {
+      "id": "6275199fe764a5320400004d",
+      "ideal_answer_index": 1
+    }
+  ],
+  "9B5_golden.json": [
+    {
+      "id": "60606c9994d57fd87900003b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6027fa581cb411341a0000ee",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "601ec5661cb411341a000063",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6032536a1cb411341a00013b",
+      "ideal_answer_index": 6
+    },
+    {
+      "id": "602a84ae1cb411341a000116",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "601ebde11cb411341a00005d",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5fdb4190a43ad3127800001b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "60291a0c1cb411341a00010d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5fe30efea43ad31278000038",
+      "ideal_answer_index": 1
+    }
+  ],
+  "2B4_golden.json": [
+    {
+      "id": "52ee065d98d0239505000033",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "52f77edb2059c6d71c000028",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "5314c045dae131f847000007",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "532361fd9b2d7acc7e000013",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "532c0ac4d6d3ac6a3400001a",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "533175add6d3ac6a3400003c",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "53354eafd6d3ac6a34000044",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "53355befd6d3ac6a34000046",
+      "ideal_answer_index": null
+    }
+  ],
+  "9B3_golden.json": [
+    {
+      "id": "5fdb42b7a43ad31278000025",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "60290c2b1cb411341a00010a",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "6030fe7a1cb411341a000128",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "60527fc794d57fd879000013",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "60579cb394d57fd87900002e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6057a1ed94d57fd87900002f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6057a3bf94d57fd879000030",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6057bf0694d57fd879000031",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "6057c2f894d57fd879000033",
+      "ideal_answer_index": 0
+    }
+  ],
+  "3B1_golden.json": [
+    {
+      "id": "530cf4fe960c95ad0c000009",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5314d05adae131f84700000d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5357a514f1005d6b58000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "535d69177d100faa09000003",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5363bad27d100faa0900000e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "54d7b457e19bba8909000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "54db1d580f63c58e6e000005",
+      "ideal_answer_index": 0
+    }
+  ],
+  "2B2_golden.json": [
+    {
+      "id": "52bf1dea03868f1b06000012",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "5309fa5e970c65fa6b000003",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "530cefaaad0bf1360c00000b",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "530f685c329f5fcf1e000002",
+      "ideal_answer_index": null
+    },
+    {
+      "id": "531a34d5b166e2b806000036",
+      "ideal_answer_index": null
+    }
+  ],
+  "11B3_golden.json": [
+    {
+      "id": "6429fad757b1c7a31500000e",
+      "ideal_answer_index": 1
+    }
+  ],
+  "5B4_golden.json": [
+    {
+      "id": "587f8324d8d850a152000003",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "587d2b7efe8a08052f000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58eb7898eda5a57672000006",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "58cf5c5a8acda34529000003",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "587d016ed673c3eb14000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "58e75d483e8b6dc87c000005",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "58af14ae717cd3f655000001",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "58e782fd3e8b6dc87c000006",
+      "ideal_answer_index": 7
+    },
+    {
+      "id": "58b67fae22d3005309000009",
+      "ideal_answer_index": 4
+    },
+    {
+      "id": "5883b8e6e56acf5176000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5883a25d7ffa0d4374000001",
+      "ideal_answer_index": 0
+    }
+  ],
+  "7B2_golden.json": [
+    {
+      "id": "5c6d7ff87c78d6947100003c",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c6d88257c78d6947100003d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c70001f7c78d6947100005c",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5c6be8f07c78d69471000032",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c6d8b237c78d6947100003e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c61f379e842deac67000006",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c72d4c77c78d6947100007c",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c641179e842deac67000012",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c53131e7e3cb0e231000012",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c641c60e842deac67000013",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c643485e842deac67000015",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c645313e842deac67000019",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5c5f18501a4c55d80b000017",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c74111f7c78d694710000a1",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5c6aef167c78d69471000023",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c530ff67e3cb0e23100000f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c60382ac01990ff41000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c6585287c78d69471000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5c629fffe842deac67000009",
+      "ideal_answer_index": 0
+    }
+  ],
+  "6B1_golden.json": [
+    {
+      "id": "5a468785966455904c00000d",
+      "ideal_answer_index": 7
+    },
+    {
+      "id": "5a894f6abc7bade53a000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5916f14070f9fc6f0f00001f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a80d6cbfaa1ab7d2e000024",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a760c8483b0d9ea66000017",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6d0727b750ff445500002b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a43a581966455904c00000a",
+      "ideal_answer_index": 4
+    },
+    {
+      "id": "5a855585faa1ab7d2e000029",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "58edf567eda5a57672000011",
+      "ideal_answer_index": 4
+    },
+    {
+      "id": "58ee1cafeda5a57672000014",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5a82fc89faa1ab7d2e000028",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "58ee217feda5a57672000015",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "593ff22b70f9fc6f0f000023",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "590af75d70f9fc6f0f00001c",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "593fe7f970f9fc6f0f000022",
+      "ideal_answer_index": 5
+    },
+    {
+      "id": "590c740d70f9fc6f0f00001d",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5925227670f9fc6f0f000020",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a39453d966455904c000006",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5a003e0a966455904c000001",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5a6e2b1bb750ff445500003e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6e5df6b750ff445500004e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a37df1c966455904c000004",
+      "ideal_answer_index": 0
+    }
+  ],
+  "3B3_golden.json": [
+    {
+      "id": "54ede8c594afd61504000009",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "54edeb4394afd6150400000b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "54f08fa494afd61504000017",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "54f09a5894afd6150400001c",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "54f1e887c409818c32000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "54f48cb74e9bf3263f000001",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "54fb4b34d176fff445000001",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "54fc3cf410565e080c000001",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "55000cc4e9bde69634000004",
+      "ideal_answer_index": 1
+    }
+  ],
+  "9B1_golden.json": [
+    {
+      "id": "5fdb4364a43ad31278000029",
+      "ideal_answer_index": 7
+    },
+    {
+      "id": "601d72a31cb411341a000037",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e3393e1fbd6abf43b000063",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "601d35111cb411341a00002f",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5e4d6e446d0a27794100002f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "601d2ec01cb411341a00002d",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5e2b2d4afbd6abf43b000008",
+      "ideal_answer_index": 0
+    }
+  ],
+  "10B2_golden.json": [
+    {
+      "id": "62114bd93a8413c65300000d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "605794c294d57fd87900002d",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "601ffd571cb411341a000079",
+      "ideal_answer_index": 0
+    }
+  ],
+  "8B2_golden.json": [
+    {
+      "id": "5cf7835fa49efeb44c000011",
+      "ideal_answer_index": 2
+    },
+    {
+      "id": "5e371a1db5b409ea53000015",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5d31daacb3a6380763000003",
+      "ideal_answer_index": 6
+    },
+    {
+      "id": "5e36e093b5b409ea5300000f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e4940f46d0a277941000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e49c5ee6d0a277941000012",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e3709a4b5b409ea53000012",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5cf619a8a49efeb44c000010",
+      "ideal_answer_index": 5
+    },
+    {
+      "id": "5e49c88c6d0a277941000013",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5d35b9ecb3a6380763000004",
+      "ideal_answer_index": 3
+    },
+    {
+      "id": "5e2dbe17fbd6abf43b000019",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e2dc047fbd6abf43b00001b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e2dfb52fbd6abf43b00001e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e49bcce6d0a27794100000f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5cf0f567a49efeb44c00000b",
+      "ideal_answer_index": 6
+    },
+    {
+      "id": "5e36de90b5b409ea5300000e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e5b9b96752ebcdc7a000005",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5e4700e03f54159529000015",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5e2db427fbd6abf43b000015",
+      "ideal_answer_index": 0
+    }
+  ],
+  "11B1_golden.json": [
+    {
+      "id": "64089be7201352f04a000022",
+      "ideal_answer_index": 1
+    }
+  ],
+  "6B3_golden.json": [
+    {
+      "id": "5a67c284b750ff4455000011",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6a3464b750ff4455000026",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6e3d21b750ff4455000043",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a75f2fc83b0d9ea66000007",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6e33e4b750ff4455000041",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6e22b9b750ff445500003b",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a75f6e083b0d9ea66000009",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6a7869b750ff4455000028",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5a6cfe27b750ff4455000029",
+      "ideal_answer_index": 4
+    },
+    {
+      "id": "5a6fa417b750ff445500005f",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6fa31ab750ff445500005e",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6fa9f7b750ff4455000061",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6d1733b750ff4455000030",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a760e5583b0d9ea66000018",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5a6f940bb750ff445500005a",
+      "ideal_answer_index": 1
+    }
+  ],
+  "4B5_golden.json": [
+    {
+      "id": "5717ab7ccb4ef8864c00000c",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5715c16dcb4ef8864c000004",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5710eec5a5ed216440000004",
+      "ideal_answer_index": 6
+    },
+    {
+      "id": "5719f5b27de986d80d00000c",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "57279ef20fd6f91b68000018",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "571696d9cb4ef8864c000009",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5710e131a5ed216440000001",
+      "ideal_answer_index": 6
+    },
+    {
+      "id": "57169b63cb4ef8864c00000b",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "5713506d1174fb1755000003",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5717e0717de986d80d000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "57152ebbcb4ef8864c000002",
+      "ideal_answer_index": 0
+    },
+    {
+      "id": "5722027a0fd6f91b68000014",
+      "ideal_answer_index": 1
+    },
+    {
+      "id": "57134d511174fb1755000002",
+      "ideal_answer_index": 1
+    }
+  ]
+}
