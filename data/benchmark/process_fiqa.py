@@ -14,7 +14,7 @@ def process_fiqa():
             queries.append({
                 'query_id': str(q['_id']),
                 'query': q['text'],
-                'gt_answer': q2gt[q['_id']]
+                'gt_answer': q2gt[q['_id']]['gt_answer'],
             })
     print(f"Number of queries: {len(queries)}")
     json.dump({'input_data': queries}, open('processed_data/fiqa/fiqa_queries.json', 'w'), indent=2)
