@@ -34,7 +34,7 @@ def process_lotte():
                 'gt_answer': gt
             })
         print(f'Number of queries: {len(queries)}')
-        json.dump(queries, open(f'processed_data/{domain}/{domain}_queries.json', 'w'), indent=2)
+        json.dump({'input_data': queries}, open(f'processed_data/{domain}/{domain}_queries.json', 'w'), indent=2)
 
         docid = 0
         raw_documents = []
