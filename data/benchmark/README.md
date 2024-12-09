@@ -10,7 +10,7 @@ Please login to [BioASQ](http://participants-area.bioasq.org/datasets/), then do
 
 - In `Datasets for task a`, download `allMeSH_2022.zip` throuth the entry of `Training v.2022 (txt)` in the table. Unzip it to `raw_data/bioasq/allMeSH_2022.json`. Note that this JSON file is of 27G large, please make sure you have enough disk space.
 
-- In `Datasets for task a`, download files throuth the links column `Test data` in the table from 2014 to 2023. Unzip the files and put the JSON files into the folder `raw_data/bioasq`:
+- In `Datasets for task b`, download files throuth the links column `Test data` in the table from 2014 to 2023. Unzip the files and put the JSON files into the folder `raw_data/bioasq`:
     - `{2~9}B{1~5}_golden.json`
     - `10B{1~6}_golden.json`
     - `11B{1~4}_golden.json`
