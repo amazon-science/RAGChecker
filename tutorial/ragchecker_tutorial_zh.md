@@ -197,7 +197,7 @@ RAGChecker提供三类指标来评估RAG系统的不同方面：
 生成指标可以评估生成器的多个方面性能：
 
 - **上下文利用率（Context Utilization）**：生成器有效使用上下文中相关信息的程度。
-- **噪音敏感度（Noise Sensitivity）**：生成器受相关和不相关文本块中噪音影响的程度。
+- **对相关/不相关chunk中的噪音敏感度（Noise Sensitivity in Relevant/Irrelevant Chunks）**：生成器受相关和不相关文本块中噪音影响的程度。
 - **幻觉（Hallucination）**：生成的不在上下文中的错误信息。
 - **自身知识（Self-knowledge）**：使用模型自身知识而不是检索上下文中的内容。
 - **忠实度（Faithfulness）**：生成器使用检索上下文的程度。

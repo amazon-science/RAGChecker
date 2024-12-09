@@ -199,7 +199,7 @@ The computation of retriever metrics requires `GT answer` and `retrieved context
 These metrics evaluate various aspects of the generator's performance:
 
 - **Context Utilization**: How effectively the generator uses relevant information from the context.
-- **Noise Sensitivity**: How much the generator is influenced by noise in relevant and irrelevant chunks.
+- **Noise Sensitivity in Relevant/Irrelevant Chunks**: How much the generator is influenced by noise in relevant and irrelevant chunks.
 - **Hallucination**: Incorrect information generated that's not in the context.
 - **Self-knowledge**: Use of the model's own knowledge instead of the context.
 - **Faithfulness**: How well the generator sticks to the retrieved context.
