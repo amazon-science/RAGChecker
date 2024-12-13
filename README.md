@@ -29,6 +29,8 @@ RAGChecker empowers developers and researchers to thoroughly evaluate, diagnose,
 
 
 ## 🔥 News
+- [10/12/2024] RAGChecker is shown at [NeurIPS Dataset and Benchmark Track](https://openreview.net/pdf?id=J9oefdGUuM)!
+- [03/12/2024] RAGChecker benchmark is released. Please refer to the guide in [data/benchmark/README.md](./data/benchmark/README.md). 
 - [08/16/2024] RAGChecker paper is on arXiv: https://arxiv.org/pdf/2408.08067
 
 
