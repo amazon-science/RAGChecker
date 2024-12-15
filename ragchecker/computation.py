@@ -15,7 +15,7 @@ def evaluate_precision(result: RAGResult):
         return
     assert result.answer2response is not None
     answer2response = to_bool(result.answer2response)
-    if len(answer2response) > 0:
+    if isinstance(answer2response, (np.ndarray, list)) and len(answer2response) > 0:
         result.metrics[metrics.precision] = np.mean(answer2response)
     else:
         result.metrics[metrics.precision] = 0.
@@ -26,7 +26,7 @@ def evaluate_recall(result: RAGResult):
         return
     assert result.response2answer is not None
     response2answer = to_bool(result.response2answer)
-    if len(response2answer) > 0:
+    if isinstance(response2answer, (np.ndarray, list)) and len(response2answer) > 0:
         result.metrics[metrics.recall] = np.mean(response2answer)
     else:
         result.metrics[metrics.recall] = 0.
@@ -61,11 +61,17 @@ def evaluate_retrieval(result: RAGResult):
     """Evaluate retrieval metrics together as they share the same intermediate results."""
     assert result.retrieved2answer is not None
     retrieved2answer = to_bool(result.retrieved2answer)
-    if len(retrieved2answer) > 0 and len(retrieved2answer[0]) > 0:
-        claim_recalled = np.max(retrieved2answer, axis=1)
-        result.metrics[metrics.claim_recall] = np.mean(claim_recalled)
-        psg_useful = np.max(retrieved2answer, axis=0)
-        result.metrics[metrics.context_precision] = np.mean(psg_useful)
+    if isinstance(retrieved2answer, (np.ndarray, list)) and len(retrieved2answer) > 0:
+        if isinstance(retrieved2answer[0], (np.ndarray, list)) and len(retrieved2answer[0]) > 0:
+            claim_recalled = np.max(retrieved2answer, axis=1)
+            result.metrics[metrics.claim_recall] = np.mean(claim_recalled)
+            psg_useful = np.max(retrieved2answer, axis=0)
+            result.metrics[metrics.context_precision] = np.mean(psg_useful)
+        else:
+            # This handles the case where retrieved2answer is a 1D array of booleans
+            claim_recalled = retrieved2answer
+            result.metrics[metrics.claim_recall] = np.mean(claim_recalled)
+            result.metrics[metrics.context_precision] = 0.
     else:
         result.metrics[metrics.claim_recall] = 0.
         result.metrics[metrics.context_precision] = 0.
@@ -77,11 +83,16 @@ def evaluate_context_utilization(result: RAGResult):
     assert result.retrieved2answer is not None and result.response2answer is not None
     retrieved2answer = to_bool(result.retrieved2answer)
     response2answer = to_bool(result.response2answer)
-    if len(retrieved2answer) > 0 and len(retrieved2answer[0]) > 0:
-        claim_recalled = np.max(retrieved2answer, axis=1)
-        if np.sum(claim_recalled) > 0:
-            claim_used = claim_recalled & response2answer
-            result.metrics[metrics.context_utilization] = np.sum(claim_used) / np.sum(claim_recalled)
+    
+    if isinstance(retrieved2answer, (np.ndarray, list)) and len(retrieved2answer) > 0:
+        # Check if retrieved2answer is a 1D array of booleans
+        if np.ndim(retrieved2answer) == 1 or (np.ndim(retrieved2answer) > 1 and len(retrieved2answer[0]) > 0):
+            claim_recalled = np.max(retrieved2answer, axis=1) if np.ndim(retrieved2answer) > 1 else retrieved2answer
+            if np.sum(claim_recalled) > 0:
+                claim_used = claim_recalled & response2answer
+                result.metrics[metrics.context_utilization] = np.sum(claim_used) / np.sum(claim_recalled)
+            else:
+                result.metrics[metrics.context_utilization] = 0.
         else:
             result.metrics[metrics.context_utilization] = 0.
     else:
@@ -107,7 +118,9 @@ def evaluate_noise_sensitivity(result: RAGResult):
     retrieved2response = to_bool(result.retrieved2response)
     answer2response = to_bool(result.answer2response)
     retrieved2answer = to_bool(result.retrieved2answer)
-    if len(answer2response) > 0 and len(retrieved2response[0]) > 0 and len(retrieved2answer) > 0:
+    if isinstance(answer2response, (np.ndarray, list)) and len(answer2response) > 0 and \
+            isinstance(retrieved2response[0], (np.ndarray, list)) and \
+            len(retrieved2response[0]) > 0 and len(retrieved2answer) > 0:
         relevant_retrieved = np.max(retrieved2answer, axis=0, keepdims=True)
         relevant_faithful = np.max(relevant_retrieved & retrieved2response, axis=1)
         irrelevant_retrieved = ~np.max(retrieved2answer, axis=0, keepdims=True)
@@ -141,7 +154,9 @@ def evaluate_unfaithfulness(result: RAGResult):
     assert result.retrieved2response is not None and result.answer2response is not None
     retrieved2response = to_bool(result.retrieved2response)
     answer2response = to_bool(result.answer2response)
-    if  len(answer2response) > 0 and len(retrieved2response[0]) > 0:
+    if isinstance(retrieved2response, (np.ndarray, list)) and len(retrieved2response) > 0 and \
+            isinstance(retrieved2response[0], (np.ndarray, list)) and \
+            len(retrieved2response[0]) > 0:
         unfaithful = ~np.max(retrieved2response, axis=1)
         hallucination = np.mean(unfaithful & ~answer2response)
         self_knowledge = np.mean(unfaithful & answer2response)
@@ -156,7 +171,9 @@ def evaluate_unfaithfulness(result: RAGResult):
 def evaluate_faithfulness(result: RAGResult):
     assert result.retrieved2response is not None
     retrieved2response = to_bool(result.retrieved2response)
-    if len(retrieved2response) > 0 and len(retrieved2response[0]) > 0:
+    if isinstance(retrieved2response, (np.ndarray, list)) and len(retrieved2response) > 0 and \
+            isinstance(retrieved2response[0], (np.ndarray, list)) and \
+            len(retrieved2response[0]) > 0:
         faithful = np.max(retrieved2response, axis=1)
         result.metrics[metrics.faithfulness] = np.mean(faithful)
     else:
