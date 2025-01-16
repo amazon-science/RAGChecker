@@ -63,15 +63,15 @@ class RAGChecker():
         self.joint_check = joint_check
         self.joint_check_num = joint_check_num
         self.kwargs = kwargs
-        
+
         self.sagemaker_client = sagemaker_client
         self.sagemaker_params = sagemaker_params
         self.sagemaker_get_response_func = sagemaker_get_response_func
-        
+
         self.custom_llm_api_func = custom_llm_api_func
-        
+
         self.extractor = LLMExtractor(
-            model=extractor_name, 
+            model=extractor_name,
             batch_size=batch_size_extractor,
             api_base=extractor_api_base
         )
@@ -81,11 +81,11 @@ class RAGChecker():
             self.checker = AlignScoreChecker(batch_size=batch_size_checker)
         else:
             self.checker = LLMChecker(
-                model=checker_name, 
+                model=checker_name,
                 batch_size=batch_size_checker,
                 api_base=checker_api_base
             )
-    
+
     def extract_claims(self, results: List[RAGResult], extract_type="gt_answer"):
         """
         Extract claims from the response and ground truth answer.
@@ -99,7 +99,7 @@ class RAGChecker():
         """
         assert extract_type in ["gt_answer", "response"], \
             "extract_type should be either 'gt_answer' or 'response'."
-        
+
         if extract_type == "gt_answer":
             results = [ret for ret in results if ret.gt_answer_claims is None]
             texts = [result.gt_answer for result in results]
@@ -109,7 +109,7 @@ class RAGChecker():
         if not results:
             return
         questions = [result.query for result in results]
-        
+
         logger.info(f"Extracting claims for {extract_type} of {len(results)} RAG results.")
         extraction_results = self.extractor.extract(
             batch_responses=texts,
@@ -194,8 +194,8 @@ class RAGChecker():
                 result.retrieved2answer = checking_results[i]
             else:
                 result.retrieved2response = checking_results[i]
-        
-    def evaluate(self, results: RAGResults, metrics=all_metrics, save_path=None):
+
+    def evaluate(self, results: RAGResults, metrics=all_metrics, save_path=None, indent=2, ensure_ascii=True):
         """
         Evaluate the RAG results.
 
@@ -207,7 +207,7 @@ class RAGChecker():
             List of metrics to compute. Default: 'all'.
         save_path : str, optional
             Path to save the results. Default: None. Will perform progress checkpointing if provided.
-        """ 
+        """
         # identify the metrics and required intermediate results
         if isinstance(metrics, str):
             metrics = [metrics]
@@ -222,19 +222,19 @@ class RAGChecker():
                 ret_metrics.add(metric)
         for metric in ret_metrics:
             requirements.update(METRIC_REQUIREMENTS[metric])
-        
+
         # compute the required intermediate results
         for requirement in requirements:
             self.check_claims(results, check_type=requirement)
             if save_path is not None:
                 with open(save_path, "w") as f:
-                    f.write(results.to_json(indent=2))
+                    f.write(results.to_json(indent=indent, ensure_ascii=ensure_ascii))
 
         # compute the metrics
         for metric in ret_metrics:
             for result in results.results:
                 METRIC_FUNC_MAP[metric](result)
-        
+
         # aggregate the metrics
         for group, group_metrics in METRIC_GROUP_MAP.items():
             if group == all_metrics:
@@ -244,10 +244,10 @@ class RAGChecker():
                     results.metrics[group][metric] = round(np.mean(
                         [result.metrics[metric] for result in results.results]
                     ) * 100, 1)
-        
-        # save the results            
+
+        # save the results
         if save_path is not None:
                 with open(save_path, "w") as f:
-                    f.write(results.to_json(indent=2))
+                    f.write(results.to_json(indent=indent, ensure_ascii=ensure_ascii))
 
         return results.metrics
