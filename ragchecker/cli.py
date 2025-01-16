@@ -18,6 +18,15 @@ def get_args():
         help="Output path to the result json file."
     )
     parser.add_argument(
+        "--ensure_ascii", type=bool, default=True,
+        help="Whether to ensure ascii characters in output."
+        " (Set this to False if you are processing non-English content)"
+    )
+    parser.add_argument(
+        "--indent", type=int, default=2,
+        help="Set JSON output indent."
+    )
+    parser.add_argument(
         '--extractor_name', type=str, default="bedrock/meta.llama3-70b-instruct-v1:0",
         help="Model used for extracting claims. Default: bedrock/meta.llama3-70b-instruct-v1:0"
     )
@@ -45,7 +54,6 @@ def get_args():
         "--batch_size_checker", type=int, default=32,
         help="Batch size for checker."
     )
-    
     # checking options
     parser.add_argument(
         '--metrics', type=str, nargs='+', default=[all_metrics],
@@ -83,10 +91,10 @@ def main():
     )
     with open(args.input_path, "r") as f:
         rag_results = RAGResults.from_json(f.read())
-    evaluator.evaluate(rag_results, metrics=args.metrics, save_path=args.output_path)
-    print(json.dumps(rag_results.metrics, indent=2))
+    evaluator.evaluate(rag_results, metrics=args.metrics, save_path=args.output_path, ensure_ascii=args.ensure_ascii)
+    print(json.dumps(rag_results.metrics, indent=args.indent, ensure_ascii=args.ensure_ascii))
     with open(args.output_path, "w") as f:
-        f.write(rag_results.to_json(indent=2))
+        f.write(rag_results.to_json(indent=args.indent, ensure_ascii=args.ensure_ascii))
 
 
 if __name__ == "__main__":
