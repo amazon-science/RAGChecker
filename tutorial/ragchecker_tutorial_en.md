@@ -12,6 +12,7 @@ Table of Contents:
    - [Retriever Metrics](#retriever-metrics)
    - [Generator Metrics](#generator-metrics)
    - [Summary of RAGChecker Metrics](#summary-of-ragchecker-metrics)
+   - [Metric Input Requirements](#metric-input-requirements)
 - [How to Use RAGChecker](#how-to-use-ragchecker)
    - [Command Line Method](#command-line-method)
    - [Embedding in Python Code](#embedding-in-python-code)
@@ -222,6 +223,30 @@ These metrics evaluate various aspects of the generator's performance:
 |           | Self-knowledge | Use of the model's own knowledge instead of the context | Whether it is lower the better depends on user's preference |
 |           | Faithfulness | How well the generator sticks to the retrieved context |  |
 
+
+### Metric Input Requirements
+
+RAGChecker computes metrics through intermediate claim-checking results. The table below summarizes which input fields are needed in practice for each metric.
+
+| Metric | Intermediate check(s) | Required input fields |
+| -- | -- | -- |
+| `precision` | `answer2response` | `query`, `gt_answer`, `response` |
+| `recall` | `response2answer` | `query`, `gt_answer`, `response` |
+| `f1` | `answer2response`, `response2answer` | `query`, `gt_answer`, `response` |
+| `claim_recall` | `retrieved2answer` | `query`, `gt_answer`, `retrieved_context` |
+| `context_precision` | `retrieved2answer` | `query`, `gt_answer`, `retrieved_context` |
+| `context_utilization` | `retrieved2answer`, `response2answer` | `query`, `gt_answer`, `response`, `retrieved_context` |
+| `noise_sensitivity_in_relevant` | `retrieved2response`, `answer2response`, `retrieved2answer` | `query`, `gt_answer`, `response`, `retrieved_context` |
+| `noise_sensitivity_in_irrelevant` | `retrieved2response`, `answer2response`, `retrieved2answer` | `query`, `gt_answer`, `response`, `retrieved_context` |
+| `hallucination` | `retrieved2response`, `answer2response` | `query`, `gt_answer`, `response`, `retrieved_context` |
+| `self_knowledge` | `retrieved2response`, `answer2response` | `query`, `gt_answer`, `response`, `retrieved_context` |
+| `faithfulness` | `retrieved2response` | `query`, `response`, `retrieved_context` |
+
+If a metric requires `retrieved_context`, each retrieved chunk should include a `text` field. The `doc_id` field is optional.
+
+`faithfulness` is the only metric in this list that is reference-free in its computation: it checks response claims against the retrieved context and does not use `gt_answer`. Other metrics use `gt_answer` either to assess response correctness and completeness or to decide which retrieved chunks are relevant.
+
+When a required field is missing, RAGChecker cannot compute the corresponding intermediate check as a meaningful partial score. Empty intermediate results can produce a score of `0.0`, but that should not be interpreted the same way as a valid zero from a complete example.
 
 
 
