@@ -1,13 +1,11 @@
-import os
 import json
 from argparse import ArgumentParser, RawTextHelpFormatter
 
-from .evaluator import RAGChecker
-from .container import RAGResults
-from .metrics import *
+DEFAULT_MODEL = "bedrock/meta.llama3-70b-instruct-v1:0"
+DEFAULT_METRICS = "all_metrics"
 
 
-def get_args():
+def build_parser():
     parser = ArgumentParser(formatter_class=RawTextHelpFormatter)
     parser.add_argument(
         "--input_path", type=str, required=True,
@@ -18,20 +16,20 @@ def get_args():
         help="Output path to the result json file."
     )
     parser.add_argument(
-        '--extractor_name', type=str, default="bedrock/meta.llama3-70b-instruct-v1:0",
-        help="Model used for extracting claims. Default: bedrock/meta.llama3-70b-instruct-v1:0"
+        '--extractor_name', type=str, default=DEFAULT_MODEL,
+        help=f"Model used for extracting claims. Default: {DEFAULT_MODEL}"
     )
     parser.add_argument(
-        '--extractor_api_base', type=str, default="bedrock/meta.llama3-70b-instruct-v1:0",
-        help='API base URL for the extractor if using vllm deployed open source LLMs. Default: bedrock/meta.llama3-70b-instruct-v1:0'
+        '--extractor_api_base', type=str,
+        help='API base URL for the extractor if using vllm deployed open source LLMs.'
     )
     parser.add_argument(
         '--extractor_max_new_tokens', type=int, default=1000,
         help="Max generated tokens of the extractor, set a larger value for longer documents. Default: 1000"
     )
     parser.add_argument(
-        "--checker_name", type=str,
-        help="Model used for checking whether the claims are factual. "
+        "--checker_name", type=str, default=DEFAULT_MODEL,
+        help=f"Model used for checking whether the claims are factual. Default: {DEFAULT_MODEL}"
     )
     parser.add_argument(
         '--checker_api_base', type=str,
@@ -48,7 +46,7 @@ def get_args():
     
     # checking options
     parser.add_argument(
-        '--metrics', type=str, nargs='+', default=[all_metrics],
+        '--metrics', type=str, nargs='+', default=[DEFAULT_METRICS],
         help='Metrics to evaluate the results.'
     )
     parser.add_argument(
@@ -64,10 +62,17 @@ def get_args():
     )
 
 
-    return parser.parse_args()
+    return parser
+
+
+def get_args(args=None):
+    return build_parser().parse_args(args)
 
 
 def main():
+    from .evaluator import RAGChecker
+    from .container import RAGResults
+
     args = get_args()
     evaluator = RAGChecker(
         extractor_name=args.extractor_name,
